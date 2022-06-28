@@ -1,0 +1,21 @@
+.ProjectPage {
+  height: 100vh;
+
+  background: url('../../assets/project-page-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ProjectPage-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 900px;
+  height: 600px;
+
+  border: 2px solid #000;
+  border-radius: 30px;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.6);
+}

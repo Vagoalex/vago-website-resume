@@ -1,0 +1,163 @@
+@import '../../style/variables.scss';
+
+.ComicsList {
+  position: relative;
+  width: 100%;
+}
+.ComicsList-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  grid-column-gap: 2em;
+  grid-row-gap: 2em;
+
+  @media screen and (max-width: $mediaBig) {
+    grid-column-gap: 3.5em;
+    grid-row-gap: 3em;
+  }
+  @media screen and (max-width: $mediaMediumWell) {
+    grid-column-gap: 1.3em;
+    grid-row-gap: 1em;
+  }
+}
+
+.ComicsList-assets {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.ComicsList-cards-more {
+  transition: all 0.5s ease;
+}
+
+.ComicsList-scroll {
+  background: linear-gradient(rgb(255, 0, 0), rgb(104, 1, 1) 80%);
+  box-shadow: 0 6px rgb(52, 0, 0), 5px 8px 10px rgba(0, 0, 0, 0.8),
+    inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 237, 237, 0.5);
+  padding: 0.25em 0.9em;
+  border-radius: 12px;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+
+  font-size: 20px;
+  z-index: 100;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &__up {
+    width: 85px;
+    height: 28px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    display: flex;
+
+    transition: all 0.3s ease;
+
+    .mouse-wheel {
+      display: block;
+      width: 64px;
+      height: 5px;
+      background-color: #fff;
+      border-radius: 20%;
+      margin: auto;
+
+      transition: all 0.3s ease;
+      animation: move-wheel 1s linear infinite;
+    }
+  }
+
+  &:hover {
+    background: rgb(250, 37, 37)
+      linear-gradient(rgb(221, 36, 36), rgb(146, 0, 0) 80%);
+  }
+  &:hover .ComicsList-scroll__up {
+    border: 2px solid #000;
+  }
+  &:hover .mouse-wheel {
+    background-color: #000;
+  }
+  &:active {
+    background: rgb(250, 37, 37)
+      linear-gradient(rgb(221, 36, 36), rgb(146, 0, 0) 80%);
+    box-shadow: 0 2px rgb(86, 38, 6), 0 1px 6px rgba(0, 0, 0, 0.4),
+      inset 0 1px rgba(255, 255, 255, 0.3),
+      inset 0 0 3px rgba(255, 255, 255, 0.5);
+    -webkit-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+  }
+}
+
+.ComicsList-scroll-to-bottom {
+  background: linear-gradient(rgb(255, 0, 0), rgb(104, 1, 1) 80%);
+  box-shadow: 0 6px rgb(52, 0, 0), 5px 8px 10px rgba(0, 0, 0, 0.8),
+    inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 237, 237, 0.5);
+  padding: 0.5em 0.5em;
+  border-radius: 12px;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+
+  font-size: 20px;
+  z-index: 100;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  &__inner {
+    width: 20px;
+    height: 55px;
+    border: 2px solid #fff;
+    border-radius: 13px;
+    display: flex;
+
+    transition: all 0.3s ease;
+
+    .mouse-wheel {
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      margin: auto;
+
+      transition: all 0.3s ease;
+      animation: move-wheel 1s reverse linear infinite;
+    }
+  }
+
+  &:hover {
+    background: rgb(250, 37, 37)
+      linear-gradient(rgb(221, 36, 36), rgb(146, 0, 0) 80%);
+  }
+  &:hover .ComicsList-scroll-to-bottom__inner {
+    border: 2px solid #000;
+  }
+  &:hover .mouse-wheel {
+    background-color: #000;
+  }
+  &:active {
+    background: rgb(250, 37, 37)
+      linear-gradient(rgb(221, 36, 36), rgb(146, 0, 0) 80%);
+    box-shadow: 0 2px rgb(86, 38, 6), 0 1px 6px rgba(0, 0, 0, 0.4),
+      inset 0 1px rgba(255, 255, 255, 0.3),
+      inset 0 0 3px rgba(255, 255, 255, 0.5);
+    -webkit-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+  }
+
+  @media screen and (max-width: $mediaMediumWell) {
+    padding: 0.3em 0.4em;
+  }
+}

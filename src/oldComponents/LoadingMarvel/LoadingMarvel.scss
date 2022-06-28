@@ -1,0 +1,19 @@
+@import '../../style/variables.scss';
+
+.LoadingMarvel {
+  margin: 0 auto;
+  background: none;
+  display: block;
+  object-fit: none;
+  border: 10px solid #000;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 180px;
+
+  @media screen and (max-width: $mediaBig) {
+    height: 160px;
+  }
+  @media screen and (max-width: $mediaMediumWell) {
+    height: 140px;
+  }
+}

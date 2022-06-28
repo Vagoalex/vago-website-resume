@@ -1,0 +1,68 @@
+.TodoAddForm {
+  position: relative;
+  margin-top: 15px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+
+  &__input {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgb(255, 255, 255);
+    border-bottom: 4px solid rgb(255, 255, 255);
+    border-right: 4px solid rgb(255, 255, 255);
+    width: 100%;
+    border-radius: 5px;
+    border-top-right-radius: 0px;
+    padding: 5px 5px;
+    margin-right: 5px;
+  }
+  &__input::placeholder {
+    color: #fff;
+  }
+  &__btn {
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgb(255, 255, 255);
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      background-color: rgb(57, 57, 57);
+      border: 2px solid rgb(0, 0, 0);
+    }
+  }
+  &__btn--active {
+    background-color: rgb(173, 173, 173);
+    border: 2px solid rgb(0, 0, 0);
+    color: #000;
+    &:hover {
+      transform: scale(1);
+    }
+    &:active {
+      background-color: rgb(173, 173, 173);
+      border: 2px solid rgb(0, 0, 0);
+    }
+  }
+}
+
+.TodoAddForm-error {
+  position: absolute;
+  bottom: -26px;
+  left: 0;
+  text-transform: uppercase;
+  color: red;
+  background-color: #000;
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  box-shadow: 15px 15px 20px rgb(255 255 255 / 40%);
+}

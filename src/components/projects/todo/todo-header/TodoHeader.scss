@@ -1,0 +1,19 @@
+.TodoHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.TodoHeader-info {
+  text-decoration: underline;
+  display: flex;
+  font-weight: 700;
+  &__desk:last-child {
+    padding-left: 30px;
+  }
+  &__desk--active {
+    font-weight: 800;
+    font-size: 17px;
+  }
+}

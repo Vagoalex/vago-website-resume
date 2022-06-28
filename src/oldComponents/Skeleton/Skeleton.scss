@@ -1,0 +1,61 @@
+.Skeleton {
+  background: url('./iron-man-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  border-radius: 10px;
+  flex: 40%;
+  width: 100%;
+  padding: 25px;
+  border: 2px solid #000;
+  box-shadow: 12px -6px 18px rgba(0, 0, 0, 0.95);
+}
+
+.skeleton-select {
+  background-color: rgb(60, 59, 59, 0.85);
+  border-radius: 15px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+  filter: drop-shadow(0px 5px 20px #9f0013);
+}
+
+.skeleton {
+  height: 100%;
+  &__header {
+    display: grid;
+    grid-template-columns: 40px auto;
+    column-gap: 10px;
+    align-items: center;
+  }
+  &__circle {
+    width: 40px;
+    height: 40px;
+    background-color: #3b3a3a;
+    filter: drop-shadow(0px 5px 20px #000000);
+    border-radius: 100%;
+  }
+  &__mini {
+    width: 100%;
+    height: 16px;
+    background-color: #3b3a3a;
+    filter: drop-shadow(0px 5px 20px #9f0013);
+    border-radius: 15px;
+  }
+  &__block {
+    height: 35px;
+    width: 100%;
+    background-color: #3b3a3a;
+    border-radius: 15px;
+    filter: drop-shadow(0px 5px 20px #9f0013);
+    margin-top: 15px;
+  }
+}

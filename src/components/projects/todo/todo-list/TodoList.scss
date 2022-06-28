@@ -1,0 +1,51 @@
+.TodoList {
+  border: 1px solid #000;
+  margin-top: 20px;
+  width: 100%;
+  height: 200px;
+
+  background-color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgb(255, 255, 255);
+  border-right: 4px solid rgb(255, 255, 255);
+  border-bottom: 4px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  .TodoList-list {
+    padding: 5px;
+    list-style: none;
+  }
+}
+
+.item-transition-enter-active {
+  animation: fade-in 500ms forwards;
+}
+
+.item-transition-exit-active {
+  animation: fade-out 500ms forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+}

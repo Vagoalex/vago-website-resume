@@ -1,0 +1,73 @@
+.TodoListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+
+  transition: all 0.5s ease;
+
+  &__text {
+    max-width: 330px;
+    word-wrap: break-word;
+  }
+  &__text--done {
+    text-decoration: line-through;
+  }
+  &__index {
+    display: inline-block;
+    background-color: #000;
+    margin-right: 5px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+  }
+  &__index--done {
+    display: inline-block;
+    background-color: #000;
+    margin-right: 5px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    color: rgb(9, 255, 0);
+  }
+}
+.TodoListItem--important {
+  background-color: rgb(255, 80, 80);
+  border: 1px solid rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.TodoListItem-buttons {
+  display: flex;
+  justify-content: space-between;
+
+  .TodoListItem-buttons-btn {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25px;
+    width: 25px;
+    border: none;
+    margin-right: 20px;
+    background-color: #000;
+    border: 1px solid rgb(55, 55, 55);
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .TodoListItem-buttons-btn-delete {
+    background-image: url('./item-delete.svg');
+  }
+  .TodoListItem-buttons-btn-important {
+    background-image: url('./item-important.svg');
+  }
+}

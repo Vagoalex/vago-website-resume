@@ -1,0 +1,79 @@
+@import '../../style/variables.scss';
+
+.Header {
+  padding: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+    color: #fff;
+    text-shadow: 1em 0.5em 2rem rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0),
+      0 0 1em rgb(0, 0, 0);
+  }
+
+  &__nav {
+  }
+}
+.Header__title-link {
+  text-decoration: none;
+  color: $main-color;
+
+  &:focus {
+    outline: 1px solid transparent;
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+  &:hover {
+    filter: drop-shadow(10px 5px 20px #9f0013);
+  }
+}
+
+.nav {
+  display: flex;
+
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  list-style: none;
+
+  &__item {
+    text-shadow: 1em 0.5em 2rem rgb(0, 0, 0), 0 0 1em rgb(0, 0, 0),
+      0 0 1em rgb(0, 0, 0);
+
+    cursor: pointer;
+  }
+  &__item:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(10px 5px 20px #9f0013);
+  }
+  .nav__slash {
+    margin: 0px 12px;
+  }
+  &__link {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  &__link--active {
+    color: #d8021b;
+  }
+}
+
+.nav__item:hover .nav__link--active {
+  transform: scale(1);
+}
+.nav__link:focus {
+  outline: 0px solid transparent;
+  border-radius: 20px;
+  filter: drop-shadow(10px 5px 5px #9f0013);
+}
+.nav__link--active {
+  color: $main-color;
+  text-decoration: underline;
+  font-size: 26px;
+}
