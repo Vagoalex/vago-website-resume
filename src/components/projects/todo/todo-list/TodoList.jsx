@@ -7,6 +7,7 @@ const TodoList = ({ todoList, setTodoList }) => {
   const removeTodoItem = (id) => {
     setTodoList([...todoList.filter((todo) => todo.id !== id)]);
   };
+
   const onToggleValue = (id, propName) => {
     const idx = todoList.findIndex((todo) => todo.id === id);
     const oldItem = todoList[idx];

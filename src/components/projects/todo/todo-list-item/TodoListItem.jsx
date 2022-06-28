@@ -14,6 +14,11 @@ const TodoListItem = ({
       className={
         important ? 'TodoListItem TodoListItem--important' : 'TodoListItem'
       }
+      style={
+        done
+          ? { border: '1px solid rgb(9, 255, 0)', color: 'rgb(9, 255, 0)' }
+          : null
+      }
     >
       <p
         className={

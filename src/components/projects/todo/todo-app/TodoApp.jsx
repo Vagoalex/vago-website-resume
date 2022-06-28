@@ -16,11 +16,15 @@ const ToDoApp = () => {
     },
     {
       id: 2,
-      text: 'Попить пивка!',
+      text: 'Попить пивка для рывка!',
       important: true,
       done: false,
     },
   ]);
+  const [filteredList, setFilteredList] = useState([]);
+
+  const [status, setStatus] = useState('All');
+
   const [countTodo, setCountTodo] = useState(null);
   const [countDone, setCountDone] = useState(null);
   const [counterId, setCounterId] = useState(3);
@@ -33,12 +37,39 @@ const ToDoApp = () => {
     setCountDone(todoList.filter((todo) => todo.done).length);
   }, [todoList]);
 
+  useEffect(() => {
+    setFilteredList(todoList);
+  }, [todoList]);
+
   const addTodoItem = ({ todo }) => {
     setTodoList([
       ...todoList,
-      { id: counterId, text: todo, important: false, done: true },
+      { id: counterId, text: todo, important: false, done: false },
     ]);
     setCounterId(counterId + 1);
+  };
+
+  const statusFilter = (statusState) => {
+    setStatus(statusState);
+    todoFilter(statusState);
+  };
+
+  const todoFilter = (statusState) => {
+    switch (statusState) {
+      case 'All':
+        setFilteredList(todoList);
+        break;
+      case 'Active':
+        setFilteredList(todoList.filter((todo) => !todo.done));
+        break;
+      case 'Done':
+        setFilteredList(todoList.filter((todo) => todo.done));
+        break;
+
+      default:
+        setFilteredList(todoList);
+        break;
+    }
   };
 
   return (
@@ -46,8 +77,16 @@ const ToDoApp = () => {
       <div className='Todo-wrapper'>
         <div className='Todo-container'>
           <ToDoHeader todo={countTodo} done={countDone} />
-          <TodoSearchPanel />
-          <TodoList todoList={todoList} setTodoList={setTodoList} />
+          <TodoSearchPanel
+            statusFilter={statusFilter}
+            todoList={todoList}
+            status={status}
+          />
+          <TodoList
+            todoList={filteredList}
+            status={status}
+            setTodoList={setTodoList}
+          />
           <TodoAddForm addTodoItem={addTodoItem} />
         </div>
       </div>

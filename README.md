@@ -1,7 +1,7 @@
 # Hi! It's my react desktop app - _Vago Web Resume_
 
 Link to this project
-[Marvel App](https://vagoalex.github.io/vago-website-resume/index.html).
+[My web resume](https://vagoalex.github.io/vago-website-resume/index.html).
 
 ## - About this App
 

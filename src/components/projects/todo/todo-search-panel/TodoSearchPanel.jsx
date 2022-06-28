@@ -1,18 +1,29 @@
 import './TodoSearchPanel.scss';
 
-const TodoSearchPanel = () => {
+const filterButtons = [
+  { id: 1, label: 'All' },
+  { id: 2, label: 'Active' },
+  { id: 3, label: 'Done' },
+];
+
+const TodoSearchPanel = ({ status, statusFilter }) => {
+  const defaultBtnClasses = 'TodoSearchPanel__btn';
+  const activeBtnClasses = 'TodoSearchPanel__btn TodoSearchPanel__btn--active';
+
   return (
     <div className='TodoSearchPanel'>
-      <input
-        className='TodoSearchPanel__input'
-        placeholder='type to search'
-        type='text'
-      />
-      <button className='TodoSearchPanel__btn TodoSearchPanel__btn--active'>
-        All
-      </button>
-      <button className='TodoSearchPanel__btn'>Active</button>
-      <button className='TodoSearchPanel__btn'>Done</button>
+      {filterButtons.map(({ id, label }) => {
+        return (
+          <button
+            key={id}
+            className={status === label ? activeBtnClasses : defaultBtnClasses}
+            data-status={label}
+            onClick={(e) => statusFilter(e.target.getAttribute('data-status'))}
+          >
+            {label}
+          </button>
+        );
+      })}
     </div>
   );
 };
