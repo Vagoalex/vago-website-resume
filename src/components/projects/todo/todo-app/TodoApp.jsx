@@ -6,21 +6,28 @@ import TodoAddForm from '../todo-add-form/TodoAddForm';
 
 import './TodoApp.scss';
 
+const defaultTodos = [
+  {
+    id: 1,
+    text: 'Сделай чертов туду лист, срочно! Я устал ждать!',
+    important: false,
+    done: true,
+  },
+  {
+    id: 2,
+    text: 'Попить пивка для рывка!',
+    important: true,
+    done: false,
+  },
+];
+
 const ToDoApp = () => {
-  const [todoList, setTodoList] = useState([
-    {
-      id: 1,
-      text: 'Сделай чертов туду лист, срочно! Я устал ждать!',
-      important: false,
-      done: true,
-    },
-    {
-      id: 2,
-      text: 'Попить пивка для рывка!',
-      important: true,
-      done: false,
-    },
-  ]);
+  // const [todoList, setTodoList] = useState(defaultTodos);
+  const [todoList, setTodoList] = useState(() => {
+    const localData = localStorage.getItem('todoList');
+    return localData ? JSON.parse(localData) : defaultTodos;
+  });
+
   const [filteredList, setFilteredList] = useState([]);
 
   const [status, setStatus] = useState('All');
@@ -39,6 +46,7 @@ const ToDoApp = () => {
 
   useEffect(() => {
     setFilteredList(todoList);
+    localStorage.setItem('todoList', JSON.stringify(todoList));
   }, [todoList]);
 
   const addTodoItem = ({ todo }) => {
