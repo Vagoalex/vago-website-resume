@@ -1,0 +1,169 @@
+.WeatherForecast {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: flex-start;
+  padding: 0px 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+  color: rgb(165, 105, 171);
+  text-shadow: 3px 3px 3px rgb(155 22 138 / 50%);
+
+  &__city-name {
+    margin-top: 20%;
+    font-weight: 700;
+    font-size: 26px;
+    position: relative;
+    z-index: 1;
+
+    animation: forecast-name-in 1s linear forwards;
+  }
+  &__days {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    margin-top: 3em;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    text-shadow: 3px 3px 3px rgba(226, 24, 199, 0.5);
+  }
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &:after {
+    content: '';
+    background: rgb(165, 105, 171);
+
+    height: 2px;
+    width: 95%;
+    position: absolute;
+    top: 21%;
+    left: 2%;
+    animation: forecast-line-in 0.8s linear forwards;
+  }
+}
+
+.forecast-day {
+  border: 3px solid rgb(62, 37, 64);
+  border-radius: 10px;
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 15px;
+  background: rgb(58, 32, 59);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+
+  &:nth-child(1) {
+    animation: forecast-day-in 1.2s linear forwards;
+  }
+  &:nth-child(2) {
+    animation: forecast-day-in 1.5s linear forwards;
+  }
+  &:nth-child(3) {
+    animation: forecast-day-in 1.8s linear forwards;
+  }
+  &:nth-child(4) {
+    animation: forecast-day-in 2.1s linear forwards;
+  }
+  // &:nth-child(5) {
+  //   animation: forecast-day-in 2.4s linear forwards;
+  // }
+  // &:nth-child(6) {
+  //   animation: forecast-day-in 2.7s linear forwards;
+  // }
+  // &:nth-child(7) {
+  //   animation: forecast-day-in 3s linear forwards;
+  // }
+  // &:nth-child(8) {
+  //   animation: forecast-day-in 3.3s linear forwards;
+  // }
+}
+
+.forecast-day-date {
+  display: flex;
+  justify-content: space-between;
+  &__date {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  &__time {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+.forecast-day-weather {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.forecast-weather {
+  text-align: left;
+  &__temperature {
+    .temperature-value {
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+  &__feelsLike {
+    margin-top: 15px;
+    .feelsLike-value {
+      font-weight: 700;
+      font-size: 20px;
+    }
+  }
+}
+.forecast-condition {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+  }
+  &__img {
+    background-image: url('http://openweathermap.org/img/wn/13n@4x.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(100%) brightness(140%) sepia(50%) hue-rotate(-100deg)
+      saturate(500%) contrast(1);
+    width: 55px;
+    height: 55px;
+    display: block;
+    position: absolute;
+    bottom: -18px;
+  }
+}
+
+@keyframes forecast-name-in {
+  0% {
+    opacity: 0;
+    transform: translateX(180%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes forecast-line-in {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes forecast-day-in {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

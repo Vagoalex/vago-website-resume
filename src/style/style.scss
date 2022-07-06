@@ -19,6 +19,7 @@ body {
   height: 100vh;
   position: relative;
   overflow-x: hidden;
+  user-select: none;
 
   color: #000;
   transition: 0.2s;

@@ -1,0 +1,137 @@
+.WeatherNow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+
+  &__temp {
+    text-align: left;
+    padding: 20px 0px 0px 23px;
+    font-size: 70px;
+    line-height: 82px;
+    color: rgb(165, 105, 171);
+    text-shadow: 3px 3px 3px rgba(155, 22, 138, 0.5);
+
+    animation: now-elements-in 1s linear forwards;
+  }
+  &__image {
+    background-image: url('http://openweathermap.org/img/wn/13n@4x.png');
+    // filter: invert(1);
+    filter: grayscale(100%) brightness(140%) sepia(50%) hue-rotate(-100deg)
+      saturate(500%) contrast(1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 140px;
+    height: 70px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translateX(-50%);
+    animation: now-image-in 2s linear forwards;
+  }
+}
+.WeatherNow-city {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 26px 10px 12px;
+  position: relative;
+
+  &__text {
+    color: rgb(165, 105, 171);
+    text-shadow: 3px 3px 3px rgba(155, 22, 138, 0.5);
+    font-weight: 700;
+    font-size: 19px;
+    animation: now-elements-in 2.5s linear forwards;
+  }
+
+  &__like {
+    background-image: url('../../../../../../assets/icons/weather/like.svg');
+    background-repeat: no-repeat;
+    background-position: center 1;
+    background-size: cover;
+    width: 24px;
+    height: 25px;
+    display: inline-block;
+    cursor: pointer;
+    animation: now-like-in 2.5s linear forwards;
+
+    &:hover {
+      background-image: url('../../../../../../assets/icons/weather/like-hover.svg');
+      transition: all 0.3s ease;
+    }
+    &:active {
+      background-image: url('../../../../../../assets/icons/weather/like-active.svg');
+      transition: all 0.2s ease;
+    }
+  }
+}
+
+.WeatherNow-empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: now-empty-in 1.5s linear forwards;
+
+  &__title {
+    color: rgb(165, 105, 171);
+    text-shadow: 3px 3px 3px rgba(155, 22, 138, 0.5);
+    font-weight: 700;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes now-empty-in {
+  0% {
+    opacity: 0;
+    top: 100%;
+  }
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+@keyframes now-elements-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes now-like-in {
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes now-image-in {
+  0% {
+    opacity: 0;
+    transform: translateX(20%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-50%);
+  }
+}

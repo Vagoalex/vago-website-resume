@@ -1,3 +1,5 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { addTodo, plusCounter } from '../../../../store/todoList/todo';
 import { useFormik } from 'formik';
 
 import './TodoAddForm.scss';
@@ -14,15 +16,21 @@ const validate = (values) => {
   return errors;
 };
 
-const TodoAddForm = ({ addTodoItem }) => {
+const TodoAddForm = () => {
+  const counterId = useSelector((state) => state.todoList.counterId);
+  const dispatch = useDispatch();
+
   const formik = useFormik({
     initialValues: {
       todo: '',
     },
 
     validate,
-    onSubmit: (values, { resetForm }) => {
-      addTodoItem(values);
+    onSubmit: ({ todo }, { resetForm }) => {
+      dispatch(
+        addTodo({ id: counterId, text: todo, important: false, done: false })
+      );
+      dispatch(plusCounter());
       resetForm(formik.initialValues);
     },
   });

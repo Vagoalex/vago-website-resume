@@ -1,0 +1,93 @@
+.WeatherDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  align-items: flex-start;
+  padding-left: 10px;
+  color: rgb(165, 105, 171);
+  text-shadow: 3px 3px 3px rgb(155 22 138 / 50%);
+  position: relative;
+
+  &__name {
+    margin-top: 20%;
+    font-weight: 700;
+    font-size: 26px;
+    position: relative;
+    z-index: 1;
+
+    animation: details-name-in 1s linear forwards;
+  }
+  &:after {
+    content: '';
+    background: rgb(165, 105, 171);
+    height: 2px;
+    width: 95%;
+    position: absolute;
+    top: 21%;
+    left: 2%;
+    animation: details-name-in 1s linear forwards;
+  }
+}
+.WeatherDetails-about {
+  margin-bottom: 20%;
+  text-align: left;
+  font-size: 20px;
+  &__text {
+    margin-top: 15%;
+    &:nth-child(1) {
+      animation: details-text-in 1.2s linear forwards;
+    }
+    &:nth-child(2) {
+      animation: details-text-in 1.5s linear forwards;
+    }
+    &:nth-child(3) {
+      animation: details-text-in 1.8s linear forwards;
+    }
+    &:nth-child(4) {
+      animation: details-text-in 2.1s linear forwards;
+    }
+    &:nth-child(5) {
+      animation: details-text-in 2.4s linear forwards;
+    }
+
+    .specialValue {
+      color: rgb(165, 105, 171);
+      font-size: 27px;
+      font-weight: 700;
+    }
+    .temperValue {
+    }
+    .feelsValue {
+    }
+    .weatherValue {
+    }
+    .sunriseValue {
+    }
+    .sunsetValue {
+    }
+  }
+}
+
+@keyframes details-name-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes details-text-in {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

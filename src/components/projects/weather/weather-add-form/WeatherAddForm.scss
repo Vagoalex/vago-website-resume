@@ -1,0 +1,77 @@
+.WeatherAddForm {
+  position: relative;
+  z-index: 5;
+  animation: form-in 3.5s linear forwards;
+}
+
+.WeatherAddForm-error {
+  position: absolute;
+  bottom: -21px;
+  right: 0;
+  text-transform: uppercase;
+  color: rgb(165, 105, 171);
+  text-shadow: 3px 3px 3px rgb(155 22 138 / 50%);
+  background-color: #000;
+  font-size: 17px;
+  padding: 1px 2px;
+  border-radius: 5px;
+  border: 1px solid rgb(151 127 155 / 90%);
+  transition: all 0.3s ease;
+}
+
+.WeatherAddForm-form {
+  &__input {
+    width: 100%;
+    height: 40px;
+    padding: 0px 13px;
+    background: rgb(210, 176, 213);
+    border: 3px solid rgb(151 127 155 / 90%);
+    border-left: none;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    font-weight: 700;
+    &::placeholder {
+      color: #000;
+    }
+    &:focus {
+      outline: 2px solid rgb(165, 105, 171);
+    }
+  }
+  &__btn {
+    background: url('../../../../assets/icons/weather/search.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    right: 17px;
+    top: 9px;
+    border: none;
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+    &:hover {
+      transform: scale(1.3);
+    }
+    &:active {
+      background: url('../../../../assets/icons/weather/seatch-active.svg');
+      transform: scale(1.3);
+    }
+  }
+}
+
+@keyframes form-in {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

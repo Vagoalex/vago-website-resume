@@ -1,3 +1,5 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { changeActiveFilter } from '../../../../store/todoList/filterTodo';
 import './TodoSearchPanel.scss';
 
 const filterButtons = [
@@ -6,7 +8,10 @@ const filterButtons = [
   { id: 3, label: 'Done' },
 ];
 
-const TodoSearchPanel = ({ status, statusFilter }) => {
+const TodoSearchPanel = () => {
+  const activeFilter = useSelector((state) => state.filterTodo.activeFilter);
+  const dispatch = useDispatch();
+
   const defaultBtnClasses = 'TodoSearchPanel__btn';
   const activeBtnClasses = 'TodoSearchPanel__btn TodoSearchPanel__btn--active';
 
@@ -16,9 +21,13 @@ const TodoSearchPanel = ({ status, statusFilter }) => {
         return (
           <button
             key={id}
-            className={status === label ? activeBtnClasses : defaultBtnClasses}
+            className={
+              activeFilter === label ? activeBtnClasses : defaultBtnClasses
+            }
             data-status={label}
-            onClick={(e) => statusFilter(e.target.getAttribute('data-status'))}
+            onClick={(e) =>
+              dispatch(changeActiveFilter(e.target.getAttribute('data-status')))
+            }
           >
             {label}
           </button>
