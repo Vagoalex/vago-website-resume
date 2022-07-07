@@ -1,3 +1,4 @@
+import { Social } from '../social/Social';
 import './HeaderBanner.scss';
 
 const HeaderBanner = () => {
@@ -84,6 +85,9 @@ const HeaderBanner = () => {
             , где смогу реализовать свой потенциал на 100500%
           </p>
         </div>
+      </div>
+      <div className='Header-banner-social'>
+        <Social />
       </div>
     </div>
   );

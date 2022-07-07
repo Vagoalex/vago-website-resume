@@ -1,0 +1,52 @@
+.Social-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.Social-list-item {
+  margin: 0 30px;
+  transition: all 0.5s ease;
+
+  .Social-list-item-link {
+    color: transparent;
+
+    padding: 10px;
+
+    &__vk {
+      background: url('../../../../../assets/icons/header/VK_black.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+    &__instagram {
+      background: url('../../../../../assets/icons/header/Instagram_black.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+    &__linkedin {
+      background: url('../../../../../assets/icons/header/LinkedIn_black.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+    &__telegram {
+      background: url('../../../../../assets/icons/header/Telegram_black.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+    &__github {
+      background: url('../../../../../assets/icons/header/github_black.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+  }
+  &:hover {
+    transform: scale(1.2);
+  }
+}
