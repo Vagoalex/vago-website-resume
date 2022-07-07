@@ -1,0 +1,45 @@
+.Header {
+  //   height: 800px;
+  height: 100vh;
+
+  min-height: 500px;
+  width: 100%;
+  //   background: #161415
+  //     url('../../../../assets/images/main-page/header-background.jpg') no-repeat
+  //     top center;
+  background-image: url('../../../../assets/images/main-page/header-background2.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  animation: animatedBackground 50s linear infinite;
+  text-align: center;
+  overflow: hidden;
+
+  position: relative;
+
+  &__nav {
+    font: 12px 'Open Sans', sans-serif;
+    // background-color: #161415;
+
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin: 0 auto;
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 120%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
