@@ -1,12 +1,15 @@
 import { lazy, Suspense } from 'react';
-import ProjectPage from '../projects/ProjectPage';
+// import ProjectPage from '../projects/ProjectPage';
 
 import './App.scss';
+
+const MainPage = lazy(() => import('../pages/main-page/MainPage'));
 
 const App = () => {
   return (
     <div className='App'>
-      <ProjectPage />
+      <MainPage />
+      {/* <ProjectPage /> */}
     </div>
   );
 };
