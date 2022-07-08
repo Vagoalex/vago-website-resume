@@ -12,7 +12,7 @@ const socials = [
   { id: 5, name: 'github', socialLink: 'https://github.com/vagoalex' },
 ];
 
-export const Social = () => {
+const Social = () => {
   return (
     <ul className='Social-list'>
       {socials.map(({ id, ...data }) => (
@@ -36,3 +36,5 @@ const SocialItem = ({ name, socialLink }) => {
     </li>
   );
 };
+
+export default Social;

@@ -1,4 +1,4 @@
-import { Social } from '../social/Social';
+import Social from '../../social/Social';
 import './HeaderBanner.scss';
 
 const HeaderBanner = () => {

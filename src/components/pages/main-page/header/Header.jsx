@@ -1,8 +1,10 @@
+import { HashLink } from 'react-router-hash-link';
 import NavList from './nav-list/NavList';
-import './Header.scss';
 import HeaderBanner from './header-banner/HeaderBanner';
 
-export const Header = () => {
+import './Header.scss';
+
+const Header = () => {
   return (
     <header className='Header'>
       <nav className='Header__nav'>
@@ -10,6 +12,13 @@ export const Header = () => {
       </nav>
       {/* Very biggest component :))) */}
       <HeaderBanner />
+      <div className='Header-scroll'>
+        <HashLink to={`/#about`} className='Header-scroll__link'>
+          link
+        </HashLink>
+      </div>
     </header>
   );
 };
+
+export default Header;

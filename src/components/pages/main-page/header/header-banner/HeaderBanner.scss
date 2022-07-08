@@ -10,7 +10,8 @@
   margin-bottom: 20px;
   display: flex;
   &__item {
-    font: 90px/1.1em 'Open-Sans', sans-serif;
+    font: 90px/1.1em 'Open Sans', sans-serif;
+    font-style: italic;
     color: #fff;
     letter-spacing: -2px;
     margin: 0 auto 18px auto;
@@ -31,8 +32,10 @@
   border-radius: 30px;
   outline: 2px solid rgba(124, 49, 173, 0.7);
 
-  padding: 10px;
+  padding: 10px 30px;
   position: relative;
+
+  margin-bottom: 50px;
 
   &::after {
     content: '';
@@ -55,7 +58,7 @@
   transition: all 0.8s ease;
 
   &__desk {
-    font: 20px/1.1em 'Open-Sans', sans-serif;
+    font: 20px/1.1em 'Open Sans', sans-serif;
     text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.7);
     text-align: center;
     color: rgb(189, 189, 189);
@@ -75,7 +78,7 @@
   display: flex;
   justify-content: center;
   &__item {
-    font: 32px/1.1em 'Open-Sans', sans-serif;
+    font: 32px/1.1em 'Open Sans', sans-serif;
     text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.9);
     margin-bottom: 10px;
     cursor: pointer;
@@ -85,7 +88,6 @@
     &:hover {
       color: rgb(0, 0, 0);
       text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.9);
-      //   transform: scale(1.2) translateY(-10px) rotate(15deg);
       animation: text-animate 0.6s;
     }
   }

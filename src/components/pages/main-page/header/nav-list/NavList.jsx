@@ -28,7 +28,7 @@ const NavListItem = ({ title, pathLink, activeLink }) => {
   return (
     <li className='NavList__item'>
       <HashLink
-        to={`/pathLink${pathLink}`}
+        to={`/${pathLink}`}
         name={title}
         className={`NavList-link ${
           activeLink === title ? activeLinkClass : ''

@@ -29,6 +29,16 @@ body {
   display: none;
 }
 
+.wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.columns {
+  position: relative;
+  padding: 0 20px;
+}
+
 .pulse {
   animation: pulse 1.5s ease-in-out 0.5s infinite;
 }
