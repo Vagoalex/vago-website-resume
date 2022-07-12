@@ -1,14 +1,9 @@
 import { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
+import data from '../../../../../app-data.json';
 import './NavList.scss';
 
-const navList = [
-  { id: 'link-1', title: 'Главная', pathLink: '#home' },
-  { id: 'link-2', title: 'Обо мне', pathLink: '#about' },
-  { id: 'link-3', title: 'Резюме', pathLink: '#resume' },
-  { id: 'link-4', title: 'Проекты', pathLink: '#projects' },
-  { id: 'link-5', title: 'Контакты', pathLink: '#contacts' },
-];
+const navList = data['nav-list'];
 
 const NavList = () => {
   const [activeLink, setActiveLink] = useState('Главная');

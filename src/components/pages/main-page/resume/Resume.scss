@@ -1,0 +1,29 @@
+.Resume {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(146, 149, 242, 1) 100%,
+    rgba(42, 0, 0, 1) 100%
+  );
+
+  padding-top: 90px;
+  padding-bottom: 72px;
+  overflow: hidden;
+}
+
+.resume-section {
+  margin-bottom: 120px;
+}
+
+// .About svg {
+//   position: absolute;
+//   bottom: -50%;
+//   left: 0;
+//   right: 0;
+//   width: 100%;
+//   transform: rotate(180deg);
+// }
+// .About svg path {
+//   fill: rgb(17, 8, 21);
+// }

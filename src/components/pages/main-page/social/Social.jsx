@@ -1,16 +1,8 @@
+import data from '../../../../app-data.json';
+
 import './Social.scss';
 
-const socials = [
-  { id: 1, name: 'vk', socialLink: 'https://vk.com/vagoalex' },
-  { id: 2, name: 'instagram', socialLink: 'https://instagram.com/vagoalex13' },
-  {
-    id: 3,
-    name: 'linkedin',
-    socialLink: 'https://www.linkedin.com/in/aleksandr-vago-420b8723a/',
-  },
-  { id: 4, name: 'telegram', socialLink: 'https://t.me/vagoalex' },
-  { id: 5, name: 'github', socialLink: 'https://github.com/vagoalex' },
-];
+const { socials } = data;
 
 const Social = () => {
   return (

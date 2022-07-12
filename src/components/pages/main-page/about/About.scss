@@ -6,6 +6,8 @@
 
   border-top: 3px solid #000;
   border-bottom: 3px solid #000;
+
+  position: relative;
 }
 
 .about-container {
@@ -73,33 +75,42 @@
   &__link {
     padding: 20px 30px;
     background-color: rgb(123, 33, 184);
+    outline: 3px solid transparent;
     border-radius: 10px;
     font-weight: 700;
 
     text-decoration: none;
     color: #fff;
 
-    transition: all 0.7s ease;
+    transition: 0.7s;
 
     .about-details-download-icon {
-      background-image: url('../../../../assets/icons/about/download-arrow.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      // background-image: url('../../../../assets/icons/about/download-arrow.svg');
+      // background-position: center;
+      // background-repeat: no-repeat;
+      // background-size: cover;
       width: 30px;
       height: 30px;
       display: inline-block;
       vertical-align: middle;
-
       margin-right: 20px;
 
-      transition: all 0.7s ease;
+      transition: 0.7s;
+      svg {
+        transition: 0.7s;
+        fill: #fff;
+      }
     }
 
     &:hover {
-      color: #000;
+      color: rgb(144, 15, 230);
+      background-color: #fff;
+
+      outline: 3px solid rgb(144, 15, 230);
       .about-details-download-icon {
-        background-image: url('../../../../assets/icons/about/download-arrow-hover.svg');
+        svg {
+          fill: rgb(144, 15, 230);
+        }
       }
     }
   }

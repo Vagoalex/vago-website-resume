@@ -6,11 +6,10 @@ import './Header.scss';
 
 const Header = () => {
   return (
-    <header className='Header'>
+    <header className='Header' id='home'>
       <nav className='Header__nav'>
         <NavList />
       </nav>
-      {/* Very biggest component :))) */}
       <HeaderBanner />
       <div className='Header-scroll'>
         <HashLink to={`/#about`} className='Header-scroll__link'>
