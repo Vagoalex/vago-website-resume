@@ -1,3 +1,5 @@
+import './ResumeViewContent.scss';
+
 const ResumeViewContent = ({ id, data }) => {
   switch (id) {
     case 'education':
@@ -16,13 +18,15 @@ const ViewDefaultContent = ({ data }) => {
   const { title, subtitle, dateInfo, text } = data;
 
   return (
-    <div className='data-content'>
-      <h3 className='data-content__title'>{title}</h3>
-      <div className='data-content-subtitles'>
-        <h4 className='data-content-subtitles__subtitle'>{subtitle}</h4>
-        <span className='data-content-subtitles__date-info'>{dateInfo}</span>
+    <div className='ViewDefaultContent'>
+      <h3 className='ViewDefaultContent__title'>{title}</h3>
+      <div className='ViewDefaultContent-subtitles'>
+        <h4 className='ViewDefaultContent-subtitles__subtitle'>{subtitle}</h4>
+        <span className='ViewDefaultContent-subtitles__date-info'>
+          {dateInfo}
+        </span>
       </div>
-      <p className='data-content__desk'>{text}</p>
+      <p className='ViewDefaultContent__desk'>{text}</p>
     </div>
   );
 };

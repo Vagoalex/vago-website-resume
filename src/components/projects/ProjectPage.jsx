@@ -9,8 +9,8 @@ const ProjectPage = () => {
   return (
     <section className='ProjectPage'>
       <div className='ProjectPage-container'>
-        {/* <TodoApp /> */}
-        <WeatherApp />
+        <TodoApp />
+        {/* <WeatherApp /> */}
       </div>
     </section>
   );

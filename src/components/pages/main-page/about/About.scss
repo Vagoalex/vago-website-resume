@@ -1,13 +1,13 @@
 .About {
   background: rgb(17, 8, 21);
   padding-top: 96px;
-  padding-bottom: 66px;
+  padding-bottom: 300px;
   overflow: hidden;
 
   border-top: 3px solid #000;
-  border-bottom: 3px solid #000;
 
   position: relative;
+  transition: 1s;
 }
 
 .about-container {
@@ -144,4 +144,10 @@
     color: transparent;
     text-shadow: none;
   }
+}
+
+.about-border {
+  fill: #9295f2;
+  position: absolute;
+  bottom: 0%;
 }

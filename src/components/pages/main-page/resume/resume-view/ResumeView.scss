@@ -33,12 +33,27 @@
   &:after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -15px;
     left: 0;
     right: 0;
     width: 100%;
-    height: 3px;
-    background-color: rgb(124 49 173);
+    height: 2px;
+    border: 2px solid rgb(124 49 173);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    background-color: #fff;
+    background-image: url('https://www.transparenttextures.com/patterns/3px-tile.png');
+
+    animation: animate-SkillsBar 60s infinite;
+  }
+}
+
+.resume-title-hidden {
+  color: transparent;
+  text-shadow: none;
+
+  &:hover {
+    text-shadow: none;
   }
 }
 
@@ -46,32 +61,8 @@
   flex: 75%;
 }
 
-.ViewDefaultContent {
-  &__title {
-    font-size: 26px;
-    font-weight: 700;
-  }
-  &__desk {
-    margin-top: 20px;
-    line-height: 30px;
-    text-align: justify;
-    color: rgb(79, 3, 134);
-  }
-}
-
-.ViewDefaultContent-subtitles {
-  margin-top: 15px;
-  display: flex;
-  align-items: baseline;
-  font-family: 'Roboto Condensed', sans-serif;
-
-  &__subtitle {
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 300;
-  }
-  &__date-info {
-    margin-left: 30px;
-    font-weight: 400;
+@keyframes animate-title {
+  100% {
+    background-position: -10000px;
   }
 }

@@ -1,5 +1,4 @@
 .Resume {
-  background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 0%,
@@ -8,22 +7,18 @@
   );
 
   padding-top: 90px;
-  padding-bottom: 72px;
+  padding-bottom: 180px;
   overflow: hidden;
+  position: relative;
+  transition: 1s;
 }
 
 .resume-section {
   margin-bottom: 120px;
 }
 
-// .About svg {
-//   position: absolute;
-//   bottom: -50%;
-//   left: 0;
-//   right: 0;
-//   width: 100%;
-//   transform: rotate(180deg);
-// }
-// .About svg path {
-//   fill: rgb(17, 8, 21);
-// }
+.resume-border {
+  fill: #191919;
+  position: absolute;
+  bottom: 0%;
+}

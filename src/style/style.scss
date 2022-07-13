@@ -25,6 +25,9 @@ body {
   color: #000;
   transition: 0.2s;
 }
+::-webkit-scrollbar {
+  width: 0;
+}
 
 .hidden {
   display: none;

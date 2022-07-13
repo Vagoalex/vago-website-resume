@@ -1,7 +1,9 @@
 import Header from './header/Header';
 import About from './about/About';
-import './MainPage.scss';
 import Resume from './resume/Resume';
+import Projects from './projects/Projects';
+
+import './MainPage.scss';
 
 const MainPage = () => {
   return (
@@ -9,6 +11,7 @@ const MainPage = () => {
       <Header />
       <About />
       <Resume />
+      <Projects />
     </>
   );
 };
