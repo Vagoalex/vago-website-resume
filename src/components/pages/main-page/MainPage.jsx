@@ -7,12 +7,12 @@ import './MainPage.scss';
 
 const MainPage = () => {
   return (
-    <>
+    <div className='MainPage'>
       <Header />
       <About />
       <Resume />
       <Projects />
-    </>
+    </div>
   );
 };
 

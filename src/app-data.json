@@ -1,4 +1,38 @@
 {
+  "projectPages": {
+    "title": [
+      "М",
+      "о",
+      "и",
+      ".",
+      "м",
+      "и",
+      "н",
+      "и",
+      "-",
+      "п",
+      "р",
+      "о",
+      "е",
+      "к",
+      "т",
+      "ы"
+    ],
+    "pages": [
+      {
+        "id": "todo",
+        "name": "todo",
+        "title": "To Do List",
+        "seeLiveTitle": "Ну нажми уж, чтобы перейти :)"
+      },
+      {
+        "id": "weather",
+        "name": "weather",
+        "title": "Weather App",
+        "seeLiveTitle": "Ну нажми уж, чтобы перейти :)"
+      }
+    ]
+  },
   "projects": {
     "title": ["М", "о", "и", ".", "п", "р", "о", "е", "к", "т", "ы"],
     "project-info": {
