@@ -1,4 +1,4 @@
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-scroll';
 import NavList from './nav-list/NavList';
 import HeaderBanner from './header-banner/HeaderBanner';
 
@@ -12,9 +12,9 @@ const Header = () => {
       </nav>
       <HeaderBanner />
       <div className='Header-scroll'>
-        <HashLink to={`/#about`} className='Header-scroll__link'>
+        <Link to='about' className='Header-scroll__link'>
           link
-        </HashLink>
+        </Link>
       </div>
     </header>
   );
