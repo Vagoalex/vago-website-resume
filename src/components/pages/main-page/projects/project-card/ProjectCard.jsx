@@ -7,7 +7,6 @@ import './ProjectCard.scss';
 
 const ProjectCard = ({ data }) => {
   const { desk, git, id, name, seeLive, seeLiveTitle, title } = data;
-  console.log(data);
 
   return (
     <div className='Project-card'>
