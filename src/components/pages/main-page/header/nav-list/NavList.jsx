@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { HashLink } from 'react-router-hash-link';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import data from '../../../../../app-data.json';
 import { changeActiveLink } from '../../../../../store/nav/navSlice';
 import './NavList.scss';
@@ -18,24 +18,25 @@ const NavList = () => {
   );
 };
 
-const NavListItem = ({ title, pathLink, activeLink }) => {
+const NavListItem = ({ title, pathLink }) => {
   const dispatch = useDispatch();
-  const activeLinkClass = 'NavList-link--active';
 
   return (
     <li
       onClick={() => dispatch(changeActiveLink(title))}
       className='NavList__item'
     >
-      <HashLink
-        to={`/${pathLink}`}
+      <Link
+        activeClass='NavList-link--active'
+        to={pathLink}
+        spy={true}
+        smooth={true}
+        duration={300}
         name={title}
-        className={`NavList-link ${
-          activeLink === title ? activeLinkClass : ''
-        }`}
+        className='NavList-link'
       >
         {title}
-      </HashLink>
+      </Link>
     </li>
   );
 };

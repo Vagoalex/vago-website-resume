@@ -47,6 +47,7 @@
     background-repeat: no-repeat;
     background-size: auto;
     transition: all 0.5s ease;
+    cursor: pointer;
 
     &:hover {
       background: url('../../../../assets/icons/header/down-arrow-hover.svg');
