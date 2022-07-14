@@ -10,14 +10,15 @@
   border: 1px solid #000;
   margin-bottom: 5px;
   font-weight: 700;
-  cursor: pointer;
+
   position: relative;
 
   transition: all 0.5s ease;
 
   &__text {
-    max-width: 330px;
+    width: 330px;
     word-wrap: break-word;
+    cursor: pointer;
   }
   &__text--done {
     text-decoration: line-through;
@@ -26,23 +27,25 @@
     display: inline-block;
     background-color: #000;
     margin-right: 5px;
-    padding: 2px 5px;
+    padding: 2px 6px;
     border-radius: 50%;
     color: rgb(255, 255, 255);
+    cursor: pointer;
   }
   &__index--done {
     display: inline-block;
-    background-color: #000;
+    background-color: rgb(9, 255, 0);
     margin-right: 5px;
-    padding: 2px 5px;
     border-radius: 50%;
-    color: rgb(9, 255, 0);
+    color: #000;
+  }
+  &:hover {
+    transform: scale(1.02);
   }
 }
 .TodoListItem--important {
   background-color: rgb(255, 80, 80);
   border: 1px solid rgb(255, 0, 0);
-  color: rgb(255, 255, 255);
 }
 
 .TodoListItem-buttons {
@@ -61,8 +64,10 @@
     border: 1px solid rgb(55, 55, 55);
     border-radius: 5px;
     cursor: pointer;
+
+    transition: all 0.5s ease;
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
     }
   }
   .TodoListItem-buttons-btn-delete {
@@ -70,5 +75,8 @@
   }
   .TodoListItem-buttons-btn-important {
     background-image: url('./item-important.svg');
+  }
+  .TodoListItem-btn--important {
+    background-image: url('./item-important-important.svg');
   }
 }

@@ -1,5 +1,10 @@
 import './TodoListItem.scss';
 
+const defaultButtonImportantClasses =
+  'TodoListItem-buttons-btn TodoListItem-buttons-btn-important';
+const activeButtonImportantClasses =
+  'TodoListItem-buttons-btn TodoListItem-btn--important';
+
 const TodoListItem = ({
   id,
   index,
@@ -8,6 +13,7 @@ const TodoListItem = ({
   done,
   removeTodoItem,
   onToggleValue,
+  onDeleteTodo,
 }) => {
   return (
     <li
@@ -41,12 +47,16 @@ const TodoListItem = ({
       <div className='TodoListItem-buttons'>
         <button
           className='TodoListItem-buttons-btn TodoListItem-buttons-btn-delete'
-          onClick={() => removeTodoItem(id)}
+          onClick={onDeleteTodo}
           id={id}
         />
         <button
           onClick={() => onToggleValue(id, 'important')}
-          className='TodoListItem-buttons-btn TodoListItem-buttons-btn-important'
+          className={
+            important
+              ? activeButtonImportantClasses
+              : defaultButtonImportantClasses
+          }
         />
       </div>
     </li>

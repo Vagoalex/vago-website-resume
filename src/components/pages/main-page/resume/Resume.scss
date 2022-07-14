@@ -1,0 +1,24 @@
+.Resume {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(146, 149, 242, 1) 100%,
+    rgba(42, 0, 0, 1) 100%
+  );
+
+  padding-top: 90px;
+  padding-bottom: 180px;
+  overflow: hidden;
+  position: relative;
+  transition: 1s;
+}
+
+.resume-section {
+  margin-bottom: 120px;
+}
+
+.resume-border {
+  fill: #191919;
+  position: absolute;
+  bottom: 0%;
+}

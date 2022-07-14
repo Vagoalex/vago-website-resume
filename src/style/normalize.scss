@@ -105,6 +105,8 @@ pre {
 
 a {
   background-color: transparent;
+  text-decoration: none;
+  color: #000;
 }
 
 /* A elements that don't have a class get default styles */
@@ -187,6 +189,7 @@ img {
 /* Make images easier to work with */
 img,
 picture {
+  height: auto;
   max-width: 100%;
   display: block;
 }
