@@ -74,11 +74,12 @@ const About = () => {
             </div>
             <div className='about-details-download'>
               <a
-                href='#!'
+                href='https://drive.google.com/file/d/1zagHENHy3cjLjBAdW0rv_lA3pC-ObIrk/view?usp=sharing'
                 className='about-details-download__link'
                 target='_blank'
                 title='Download Resume'
                 download
+                rel='noreferrer'
               >
                 {' '}
                 <span
