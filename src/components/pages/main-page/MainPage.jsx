@@ -2,6 +2,7 @@ import Header from './header/Header';
 import About from './about/About';
 import Resume from './resume/Resume';
 import Projects from './projects/Projects';
+import Footer from './footer/Footer';
 
 import './MainPage.scss';
 
@@ -12,6 +13,7 @@ const MainPage = () => {
       <About />
       <Resume />
       <Projects />
+      <Footer />
     </div>
   );
 };

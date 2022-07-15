@@ -10,7 +10,6 @@
   animation: animatedBackground 50s linear infinite;
   text-align: center;
   overflow: hidden;
-
   position: relative;
   transition: 1s;
 
@@ -22,7 +21,7 @@
     text-transform: uppercase;
     letter-spacing: 2.5px;
     margin: 0 auto;
-    z-index: 100;
+    z-index: 20;
     position: fixed;
     left: 0;
     right: 0;

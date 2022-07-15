@@ -28,6 +28,12 @@ body {
 ::-webkit-scrollbar {
   width: 0;
 }
+header {
+  z-index: 10;
+}
+section {
+  z-index: 5;
+}
 
 .hidden {
   display: none;

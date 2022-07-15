@@ -1,0 +1,128 @@
+.Footer {
+  position: relative;
+  border-top: 2px solid #000;
+}
+
+// Костыль >.<
+.Footer-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1200px;
+}
+
+.Footer-wrapper {
+  background: url('../../../../assets/gifs//footer.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  padding: 0px 20px;
+}
+
+.Footer-container {
+  position: fixed;
+  height: 400px;
+  width: 100%;
+  bottom: 0;
+  z-index: 1;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.FooterSocial-list {
+  list-style: none;
+  display: flex;
+
+  .FooterSocial-list-item {
+    margin: 10px 30px;
+    position: relative;
+
+    transition: 0.5s;
+    &__link {
+      font-size: 30px;
+      font-weight: 700;
+      color: #fff;
+
+      transition: 0.5s;
+      &:hover {
+        color: #474c91;
+      }
+    }
+    &:hover {
+      &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 100%;
+        top: -15px;
+        height: 3px;
+        background-color: #474c91;
+
+        animation: item-top-line 1000ms linear forwards;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 0%;
+        bottom: -10px;
+        height: 3px;
+        background-color: #474c91;
+
+        animation: item-bottom-line 1000ms linear forwards;
+      }
+    }
+  }
+}
+
+.Footer-scroll {
+  position: absolute;
+  top: -2%;
+  left: 0%;
+  right: 0%;
+  color: #fff;
+  display: block;
+  z-index: 10;
+  transform: translate(50%, 0%);
+
+  &__link {
+    color: transparent;
+    padding: 15px;
+    background: url('../../../../assets/icons/footer/top-arrow.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      background: url('../../../../assets/icons/footer/top-arrow hover.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+  }
+}
+
+@keyframes item-bottom-line {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes item-top-line {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

@@ -86,6 +86,44 @@
       "socialLink": "https://github.com/vagoalex"
     }
   ],
+  "footer-socials": [
+    {
+      "id": "vk",
+      "name": "vk",
+      "title": "ВКонтакте",
+      "socialLink": "https://vk.com/vagoalex"
+    },
+    {
+      "id": "insta",
+      "name": "instagram",
+      "title": "Instagram",
+      "socialLink": "https://instagram.com/vagoalex13"
+    },
+    {
+      "id": "lnkdn",
+      "name": "linkedin",
+      "title": "LinkedIn",
+      "socialLink": "https://www.linkedin.com/in/aleksandr-vago-420b8723a/"
+    },
+    {
+      "id": "tg",
+      "name": "telegram",
+      "title": "Telegram",
+      "socialLink": "https://t.me/vagoalex"
+    },
+    {
+      "id": "git",
+      "name": "github",
+      "title": "Github repo",
+      "socialLink": "https://github.com/vagoalex"
+    },
+    {
+      "id": "habr",
+      "name": "habr-career",
+      "title": "Habr-карьера",
+      "socialLink": "https://career.habr.com/vagoalex"
+    }
+  ],
   "nav-list": [
     { "id": "link-1", "title": "Главная", "pathLink": "home" },
     { "id": "link-2", "title": "Обо мне", "pathLink": "about" },
@@ -185,11 +223,11 @@
       "title": ["О", "б", "у", "ч", "е", "н", "и", "е"],
       "data": [
         {
-          "id": "education_marathon's",
-          "title": "GO IT, YouTube",
-          "subtitle": "Бесплатные курсы, марафоны, Фрилансер по жизни и т.д.",
-          "dateInfo": "5 апреля - 10 октября 2021",
-          "text": "Пол года неспешного изучения верстки (HTML, CSS) без JS, так как уделял не так много времени программированию из-за основной работы."
+          "id": "education_strada",
+          "title": "Марафон Strada",
+          "subtitle": "Обучение на обучающей площадке Strada с переходом в стажировку",
+          "dateInfo": "Октябрь 2021 - май 2022",
+          "text": "Изучение JavaScript с нуля. Обучение от крутого ментора Артема Димитрова. Был создан марафон в телеграм канале, в котором находилось около 300 человек. Все с нулевыми знаниями. Совместно изучали JavaScript по ежедневным таскам. JavaScript изучали по книги LearnJS + различные YouTube видео + разная дока. Изучалось все: базовый JavaScript, разные фичи ES6 и новых стандартов, ООП, DOM, AJAX, разрабатывали разные приложения в виде стандартных калькуляторов, To-Do листов, Weather App и Messenger. Учились использовать разные библиотеки - date-fns, cookie.js, momentum, axios и т.д. Делали проекты как по одиночке, так и в команде. Каждую неделю проходило ревью наших проектов от ментора и там он оценивал код каждого марафонца. Мы получили крутой опыт и попали на стажировку на его обучающую площадку, которую он разрабатывал."
         },
         {
           "id": "education_javascript-2.0",
@@ -203,11 +241,11 @@
           "title": "RS SCHOOL Stage 0, Stage 1",
           "subtitle": "Курс от EPAM - Rolling Scopes School",
           "dateInfo": "Ноябрь 2021 - июнь 2022",
-          "text": "Был пройден данный курс для улучшения знаний и квалификации. До конца не прошел, так как не было времени проходить сразу несколько курсов."
+          "text": "Был пройден данный курс для улучшения знаний и квалификации. Изучил адаптивную верстку, нативный JavaScript, ООП, немного Node.js."
         },
         {
           "id": "education_udemy",
-          "title": "JavaScript + React от 0 до результата",
+          "title": "JavaScript + React/Redux/Toolkit от 0 до результата",
           "subtitle": "Курс от Udemy, автор - Иван Петреченко",
           "dateInfo": "Май - Июль 2022",
           "text": "Полностью был пройден курс по Javascript, React, Redux, Toolkit. Было получено и закреплено очень много материала. Данный сайт сделал после данного курса."
@@ -221,7 +259,7 @@
         {
           "id": "work_strada",
           "title": "Strada",
-          "subtitle": "Обучение + стажировка в обучающей площадке Strada",
+          "subtitle": "Cтажировка в обучающей площадке Strada",
           "dateInfo": "Октябрь 2021 - май 2022",
           "text": "Разработка частей готовых приложений и полноценных приложений для  образовательной платформы. Изначально использовался чистый JavaScript, практиковал только его. Часто при работе использовались небольшие npm-пакеты такие как axios, sass, bootstrap, cookie.js, date-fns, и т.п.). Писали асинхронные запросы, запросы к серверам (fetch, использовали настроенный websocket). Также вёрстка небольших учебных лендингов, рефакторинг готовых лендингов (HTML + CSS, использовал SASS) по макетам в Figma. Участие в созвонах, код-ревью (проводил ревью других стажеров, также было ревью моего кода). В процессе разработки использовали Git и Github (коммиты, пул-реквесты, работа с ветками, ревью)."
         }
