@@ -1,6 +1,7 @@
 import { lazy, Suspense, useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import LoadingPage from '../pages/loading-page/LoadingPage';
+import Page404 from '../pages/page-404/Page404';
 
 import './App.scss';
 
@@ -33,7 +34,14 @@ const App = () => {
             </Suspense>
           }
         />
-        <Route path='*' element={<>Error 404...</>} />
+        <Route
+          path='*'
+          element={
+            <Suspense fallback={<LoadingPage />}>
+              {suspended ? <Page404 /> : <LoadingPage />}
+            </Suspense>
+          }
+        />
       </Routes>
     </div>
   );

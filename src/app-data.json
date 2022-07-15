@@ -62,7 +62,7 @@
           "git": "https://github.com/Vagoalex/hero_admin_panel",
           "title": "Нажми, чтобы перейти на git репозиторий :)",
           "seeLive": null,
-          "seeLiveTitle": null
+          "seeLiveTitle": "Страницы нет, так как приложение работает только на localhost"
         }
       ]
     }

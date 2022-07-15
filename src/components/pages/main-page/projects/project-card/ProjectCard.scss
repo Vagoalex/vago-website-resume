@@ -70,3 +70,12 @@
 .Project-card:hover .Project-content {
   opacity: 1;
 }
+
+.Project-btn--disabled {
+  border: 2px solid rgb(62, 62, 62);
+  color: rgb(62, 62, 62);
+  &:hover {
+    border: 2px solid rgb(62, 62, 62);
+    color: rgb(62, 62, 62);
+  }
+}

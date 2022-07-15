@@ -79,12 +79,12 @@ const LinkLiveCard = ({ id, link, liveTitle }) => {
       return (
         <a
           href={link}
-          className='Project-btn live'
+          className='Project-btn live Project-btn--disabled'
           target='_blank'
           rel='noreferrer'
           title={liveTitle}
         >
-          github repo
+          see live
         </a>
       );
 
