@@ -1,6 +1,5 @@
 .Footer {
   position: relative;
-  border-top: 2px solid #000;
 }
 
 // Костыль >.<
@@ -9,7 +8,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 1200px;
+  height: 1000px;
 }
 
 .Footer-wrapper {
@@ -44,7 +43,7 @@
 
     transition: 0.5s;
     &__link {
-      font-size: 30px;
+      font-size: 22px;
       font-weight: 700;
       color: #fff;
 

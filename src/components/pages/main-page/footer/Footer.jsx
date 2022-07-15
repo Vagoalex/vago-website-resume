@@ -8,9 +8,6 @@ const { 'footer-socials': footerSocials } = data;
 const Footer = () => {
   return (
     <div className='Footer'>
-      <div className='Footer-section' id='contacts'>
-        {/* Костыль >.< */}
-      </div>
       <div className='Footer-wrapper'>
         <div className='Footer-scroll'>
           <Link to='home' className='Footer-scroll__link'>
@@ -24,6 +21,9 @@ const Footer = () => {
             ))}
           </ul>
         </div>
+      </div>
+      <div className='Footer-section' id='contacts'>
+        {/* Костыль >.< */}
       </div>
     </div>
   );
