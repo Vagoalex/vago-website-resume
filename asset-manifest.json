@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/vago-website-resume/static/css/main.cb1df2cf.css",
-    "main.js": "/vago-website-resume/static/js/main.6ff6999a.js",
-    "static/css/2.07b05a23.chunk.css": "/vago-website-resume/static/css/2.07b05a23.chunk.css",
-    "static/js/2.d3b66016.chunk.js": "/vago-website-resume/static/js/2.d3b66016.chunk.js",
+    "main.css": "/vago-website-resume/static/css/main.cada2155.css",
+    "main.js": "/vago-website-resume/static/js/main.e23d1546.js",
+    "static/css/177.68ecd1e4.chunk.css": "/vago-website-resume/static/css/177.68ecd1e4.chunk.css",
+    "static/js/177.0dfb232f.chunk.js": "/vago-website-resume/static/js/177.0dfb232f.chunk.js",
     "static/css/959.57ae712b.chunk.css": "/vago-website-resume/static/css/959.57ae712b.chunk.css",
     "static/js/959.b2dca9c8.chunk.js": "/vago-website-resume/static/js/959.b2dca9c8.chunk.js",
     "static/css/446.2617a8bb.chunk.css": "/vago-website-resume/static/css/446.2617a8bb.chunk.css",
-    "static/js/446.2478dda5.chunk.js": "/vago-website-resume/static/js/446.2478dda5.chunk.js",
+    "static/js/446.53413d79.chunk.js": "/vago-website-resume/static/js/446.53413d79.chunk.js",
     "static/css/890.dcaf4cb4.chunk.css": "/vago-website-resume/static/css/890.dcaf4cb4.chunk.css",
     "static/js/890.cec39c22.chunk.js": "/vago-website-resume/static/js/890.cec39c22.chunk.js",
     "static/css/615.10c4909b.chunk.css": "/vago-website-resume/static/css/615.10c4909b.chunk.css",
@@ -22,6 +22,7 @@
     "static/js/382.07b83656.chunk.js": "/vago-website-resume/static/js/382.07b83656.chunk.js",
     "static/media/about-photo.jpg": "/vago-website-resume/static/media/about-photo.969e55a89cb6fbcffb6f.jpg",
     "static/media/project-page-bg.jpg": "/vago-website-resume/static/media/project-page-bg.f6e4ca1633c71cc0feda.jpg",
+    "static/media/footer.gif": "/vago-website-resume/static/media/footer.9b7299d02ed44d22f66e.gif",
     "static/media/project-page3.gif": "/vago-website-resume/static/media/project-page3.772fce41531dcd7e904f.gif",
     "static/media/space.jpg": "/vago-website-resume/static/media/space.03904c2cd929392f30c8.jpg",
     "static/media/header-banner.jpg": "/vago-website-resume/static/media/header-banner.ec824f6c1f5ecd275c12.jpg",
@@ -38,6 +39,8 @@
     "static/media/red-circle.jpg": "/vago-website-resume/static/media/red-circle.9b3ba768fbd3fb878483.jpg",
     "static/media/Instagram_black.svg": "/vago-website-resume/static/media/Instagram_black.be7e8ab4853d32623360.svg",
     "static/media/download-arrow.svg": "/vago-website-resume/static/media/download-arrow.cdd2a8a3688857eeaeacb84257c4405c.svg",
+    "static/media/top-arrow.svg": "/vago-website-resume/static/media/top-arrow.77d014a6bb14f66c03da.svg",
+    "static/media/top-arrow hover.svg": "/vago-website-resume/static/media/top-arrow hover.a9e7f2b643d208a75519.svg",
     "static/media/down-arrow.svg": "/vago-website-resume/static/media/down-arrow.cef87776b52c89763b86.svg",
     "static/media/down-arrow-hover.svg": "/vago-website-resume/static/media/down-arrow-hover.d133a30d854f3420c3e5.svg",
     "static/media/github_black.svg": "/vago-website-resume/static/media/github_black.3a94525df3d55eaa17be.svg",
@@ -54,14 +57,14 @@
     "static/media/delete-tab.svg": "/vago-website-resume/static/media/delete-tab.e7822b09561911e6fe2f.svg",
     "static/media/item-important.svg": "/vago-website-resume/static/media/item-important.c6e849a28a62a78c1465.svg",
     "static/media/item-important-important.svg": "/vago-website-resume/static/media/item-important-important.08831b7070635158df9c.svg",
-    "main.cb1df2cf.css.map": "/vago-website-resume/static/css/main.cb1df2cf.css.map",
-    "main.6ff6999a.js.map": "/vago-website-resume/static/js/main.6ff6999a.js.map",
-    "2.07b05a23.chunk.css.map": "/vago-website-resume/static/css/2.07b05a23.chunk.css.map",
-    "2.d3b66016.chunk.js.map": "/vago-website-resume/static/js/2.d3b66016.chunk.js.map",
+    "main.cada2155.css.map": "/vago-website-resume/static/css/main.cada2155.css.map",
+    "main.e23d1546.js.map": "/vago-website-resume/static/js/main.e23d1546.js.map",
+    "177.68ecd1e4.chunk.css.map": "/vago-website-resume/static/css/177.68ecd1e4.chunk.css.map",
+    "177.0dfb232f.chunk.js.map": "/vago-website-resume/static/js/177.0dfb232f.chunk.js.map",
     "959.57ae712b.chunk.css.map": "/vago-website-resume/static/css/959.57ae712b.chunk.css.map",
     "959.b2dca9c8.chunk.js.map": "/vago-website-resume/static/js/959.b2dca9c8.chunk.js.map",
     "446.2617a8bb.chunk.css.map": "/vago-website-resume/static/css/446.2617a8bb.chunk.css.map",
-    "446.2478dda5.chunk.js.map": "/vago-website-resume/static/js/446.2478dda5.chunk.js.map",
+    "446.53413d79.chunk.js.map": "/vago-website-resume/static/js/446.53413d79.chunk.js.map",
     "890.dcaf4cb4.chunk.css.map": "/vago-website-resume/static/css/890.dcaf4cb4.chunk.css.map",
     "890.cec39c22.chunk.js.map": "/vago-website-resume/static/js/890.cec39c22.chunk.js.map",
     "615.10c4909b.chunk.css.map": "/vago-website-resume/static/css/615.10c4909b.chunk.css.map",
@@ -76,7 +79,7 @@
     "382.07b83656.chunk.js.map": "/vago-website-resume/static/js/382.07b83656.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cb1df2cf.css",
-    "static/js/main.6ff6999a.js"
+    "static/css/main.cada2155.css",
+    "static/js/main.e23d1546.js"
   ]
 }
