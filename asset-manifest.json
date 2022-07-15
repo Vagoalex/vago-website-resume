@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/vago-website-resume/static/css/main.cada2155.css",
-    "main.js": "/vago-website-resume/static/js/main.e23d1546.js",
+    "main.js": "/vago-website-resume/static/js/main.efefe7ce.js",
     "static/css/177.68ecd1e4.chunk.css": "/vago-website-resume/static/css/177.68ecd1e4.chunk.css",
-    "static/js/177.0dfb232f.chunk.js": "/vago-website-resume/static/js/177.0dfb232f.chunk.js",
+    "static/js/177.6d550105.chunk.js": "/vago-website-resume/static/js/177.6d550105.chunk.js",
     "static/css/959.57ae712b.chunk.css": "/vago-website-resume/static/css/959.57ae712b.chunk.css",
     "static/js/959.b2dca9c8.chunk.js": "/vago-website-resume/static/js/959.b2dca9c8.chunk.js",
     "static/css/446.2617a8bb.chunk.css": "/vago-website-resume/static/css/446.2617a8bb.chunk.css",
@@ -58,9 +58,9 @@
     "static/media/item-important.svg": "/vago-website-resume/static/media/item-important.c6e849a28a62a78c1465.svg",
     "static/media/item-important-important.svg": "/vago-website-resume/static/media/item-important-important.08831b7070635158df9c.svg",
     "main.cada2155.css.map": "/vago-website-resume/static/css/main.cada2155.css.map",
-    "main.e23d1546.js.map": "/vago-website-resume/static/js/main.e23d1546.js.map",
+    "main.efefe7ce.js.map": "/vago-website-resume/static/js/main.efefe7ce.js.map",
     "177.68ecd1e4.chunk.css.map": "/vago-website-resume/static/css/177.68ecd1e4.chunk.css.map",
-    "177.0dfb232f.chunk.js.map": "/vago-website-resume/static/js/177.0dfb232f.chunk.js.map",
+    "177.6d550105.chunk.js.map": "/vago-website-resume/static/js/177.6d550105.chunk.js.map",
     "959.57ae712b.chunk.css.map": "/vago-website-resume/static/css/959.57ae712b.chunk.css.map",
     "959.b2dca9c8.chunk.js.map": "/vago-website-resume/static/js/959.b2dca9c8.chunk.js.map",
     "446.2617a8bb.chunk.css.map": "/vago-website-resume/static/css/446.2617a8bb.chunk.css.map",
@@ -80,6 +80,6 @@
   },
   "entrypoints": [
     "static/css/main.cada2155.css",
-    "static/js/main.e23d1546.js"
+    "static/js/main.efefe7ce.js"
   ]
 }
