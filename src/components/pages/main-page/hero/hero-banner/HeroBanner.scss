@@ -1,4 +1,4 @@
-.Header-banner {
+.Hero-banner {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -7,7 +7,7 @@
   transition: 1s;
 }
 
-.Header-banner-title {
+.Hero-banner-title {
   margin-bottom: 20px;
   display: flex;
   &__item {
@@ -28,7 +28,7 @@
   }
 }
 
-.Header-banner-text {
+.Hero-banner-text {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 30px;
   outline: 2px solid rgba(124, 49, 173, 0.7);
@@ -55,11 +55,11 @@
   }
 }
 
-.Header-banner-text-about {
-  transition: all 0.8s ease;
+.Hero-banner-text-about {
+  transition: 0.8s;
 
   &__desk {
-    font: 20px/1.1em 'Open Sans', sans-serif;
+    font: 18px/1.1em 'Open Sans', sans-serif;
     text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.7);
     text-align: center;
     color: rgb(189, 189, 189);
@@ -67,15 +67,15 @@
   &:hover {
     transform: scale(1.02);
 
-    .Header-banner-text-about--company {
-      transition: all 0.8s ease;
+    .Hero-banner-text-about--company {
+      transition: 0.8s;
       color: #000;
       text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
     }
   }
 }
 
-.Header-banner-text-subtitle {
+.Hero-banner-text-subtitle {
   display: flex;
   justify-content: center;
   &__item {
@@ -93,16 +93,13 @@
     }
   }
 }
-.Header-banner-item-hidden {
+.Hero-banner-item-hidden {
   color: transparent;
   text-shadow: none;
   &:hover {
     color: transparent;
     text-shadow: none;
   }
-}
-
-.Header-banner-social {
 }
 
 @keyframes text-animate {

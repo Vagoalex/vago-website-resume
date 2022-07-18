@@ -131,7 +131,7 @@
     { "id": "link-4", "title": "Проекты", "pathLink": "projects" },
     { "id": "link-5", "title": "Контакты", "pathLink": "contacts" }
   ],
-  "header-banner": {
+  "hero-banner": {
     "banner-desks": {
       "first-part": "Нажимаю на пиксели, перемешиваю данные",
       "second-part": "и шлепаю по клавиатуре, пока все не заработает.",
