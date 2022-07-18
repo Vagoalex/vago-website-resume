@@ -1,13 +1,13 @@
-const HeaderBannerItems = ({ bannerArr, typeClass }) => {
+const HeroBannerItems = ({ bannerArr, typeClass }) => {
   return (
     <>
       {bannerArr.map((item, index) => {
-        const hiddenClass = 'Header-banner-item-hidden';
+        const hiddenClass = 'Hero-banner-item-hidden';
 
         return (
           <div
             key={index}
-            className={`Header-banner-${typeClass}__item ${
+            className={`Hero-banner-${typeClass}__item ${
               item === '.' ? hiddenClass : ''
             }`}
           >
@@ -19,4 +19,4 @@ const HeaderBannerItems = ({ bannerArr, typeClass }) => {
   );
 };
 
-export default HeaderBannerItems;
+export default HeroBannerItems;
