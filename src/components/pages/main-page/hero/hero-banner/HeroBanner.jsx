@@ -1,3 +1,5 @@
+import { useSelector } from 'react-redux';
+
 import Social from '../../social/Social';
 import data from '../../../../../app-data.json';
 import HeroBannerItems from './HeroBannerItems';
@@ -16,9 +18,15 @@ const {
   'second-part': secondDesk,
   'span-part': spanDesk,
   'third-part': thirdDesk,
+  'adativeDesk-first': firstAdaptiveDesk,
+  'adativeDesk-span': spanAdaptiveDesk,
+  'adativeDesk-second': secondAdaptiveDesk,
 } = desks;
 
 const HeroBanner = () => {
+  const { activeScreenBurgerMenu } = useSelector((state) => state.nav);
+  console.log(activeScreenBurgerMenu);
+
   return (
     <div className='Hero-banner'>
       <div className='Hero-banner-title'>
@@ -29,18 +37,39 @@ const HeroBanner = () => {
           <HeroBannerItems bannerArr={subtitle} typeClass='text-subtitle' />
         </div>
         <div className='Hero-banner-text-about'>
-          <p className='Hero-banner-text-about__desk'>{firstDesk}</p>
-          <p className='Hero-banner-text-about__desk'>{secondDesk}</p>
-          <p className='Hero-banner-text-about__desk'>
-            <span className='Hero-banner-text-about--company'>{spanDesk}</span>
-          </p>
-          <p className='Hero-banner-text-about__desk'>{thirdDesk}</p>
+          {activeScreenBurgerMenu ? <AdaptiveDesk /> : <DefaultDesk />}
         </div>
       </div>
       <div className='Hero-banner-social'>
         <Social />
       </div>
     </div>
+  );
+};
+
+const DefaultDesk = () => {
+  return (
+    <>
+      <p className='Hero-banner-text-about__desk'>{firstDesk}</p>
+      <p className='Hero-banner-text-about__desk'>{secondDesk}</p>
+      <p className='Hero-banner-text-about__desk'>
+        <span className='Hero-banner-text-about--company'>{spanDesk}</span>
+      </p>
+      <p className='Hero-banner-text-about__desk'>{thirdDesk}</p>
+    </>
+  );
+};
+const AdaptiveDesk = () => {
+  return (
+    <>
+      <p className='Hero-banner-text-about__desk'>{firstAdaptiveDesk}</p>
+      <p className='Hero-banner-text-about__desk'>
+        <span className='Hero-banner-text-about--company'>
+          {spanAdaptiveDesk}
+        </span>
+      </p>
+      <p className='Hero-banner-text-about__desk'>{secondAdaptiveDesk}</p>
+    </>
   );
 };
 

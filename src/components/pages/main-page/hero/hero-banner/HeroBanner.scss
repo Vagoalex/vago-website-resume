@@ -12,12 +12,13 @@
 .Hero-banner-title {
   margin-bottom: 20px;
   display: flex;
+  text-align: center;
   &__item {
     font: 90px/1.1em 'Open Sans', sans-serif;
     font-style: italic;
     color: #fff;
     letter-spacing: -2px;
-    margin: 0 auto 18px auto;
+    margin: 0 auto 0 auto;
     text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.7);
     cursor: pointer;
 
@@ -33,14 +34,23 @@
       font-style: italic;
     }
     @media (max-width: $mediaSmallDesktops) {
-      font-size: 62px;
-      letter-spacing: 1.15px;
+      font: 62px/1.1em 'Open Sans', sans-serif;
       font-style: italic;
+    }
+    @media (max-width: $mediaSmallTablets) {
+      font: 38px/1.1em 'Open Sans', sans-serif;
+      font-style: italic;
+      margin: 0 2px;
+    }
+    @media (max-width: $mediaPhones) {
+      font: 32px/1.1em 'Open Sans', sans-serif;
+      font-style: italic;
+      margin: 0 2px;
     }
   }
 
-  @media (max-width: $mediaSmallDesktops) {
-    margin-bottom: 5px;
+  @media (max-width: $mediaSmallTablets) {
+    justify-content: center;
   }
 }
 
@@ -74,6 +84,15 @@
     padding: 10px 10px;
     margin-bottom: 30px;
   }
+  @media (max-width: $mediaSmallTablets) {
+    max-width: 380px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  @media (max-width: $mediaPhones) {
+    max-width: 308px;
+    margin-bottom: 40px;
+  }
 }
 .Hero-banner-text-about--company {
   transition: 0.8s;
@@ -89,7 +108,7 @@
     color: rgb(189, 189, 189);
 
     @media (max-width: $mediaLaptops) {
-      font: 14px/1.1em 'Open Sans', sans-serif;
+      font: 15px/1.1em 'Open Sans', sans-serif;
     }
   }
   &:hover {
@@ -125,6 +144,12 @@
 
     @media (max-width: $mediaLaptops) {
       font: 25px/1.1em 'Open Sans', sans-serif;
+    }
+    @media (max-width: $mediaSmallTablets) {
+      font: 18px/1.1em 'Open Sans', sans-serif;
+    }
+    @media (max-width: $mediaPhones) {
+      font: 16px/1.1em 'Open Sans', sans-serif;
     }
   }
   @media (max-width: $mediaSmallDesktops) {
