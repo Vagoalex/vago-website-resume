@@ -25,7 +25,6 @@ const {
 
 const HeroBanner = () => {
   const { activeScreenBurgerMenu } = useSelector((state) => state.nav);
-  console.log(activeScreenBurgerMenu);
 
   return (
     <div className='Hero-banner'>

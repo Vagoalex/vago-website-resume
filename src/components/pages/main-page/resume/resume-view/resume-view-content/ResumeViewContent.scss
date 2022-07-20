@@ -1,10 +1,19 @@
+@import '../../../../../../style/variables.scss';
+
 .ViewDefaultContent {
   position: relative;
   margin-bottom: 100px;
 
+  transition: all 0.5s ease;
+
   &__title {
     font-size: 26px;
     font-weight: 700;
+
+    @media (max-width: $mediaSmallDesktops) {
+      font-size: 23px;
+      line-height: 1;
+    }
   }
   &__desk {
     margin-top: 20px;
@@ -12,6 +21,10 @@
     line-height: 30px;
     text-align: justify;
     color: rgb(79, 3, 134);
+
+    @media (max-width: $mediaSmallDesktops) {
+      font-size: 16px;
+    }
   }
 
   &:before {
@@ -47,10 +60,28 @@
     font-size: 20px;
     font-style: italic;
     font-weight: 300;
+
+    @media (max-width: $mediaSmallDesktops) {
+      font-size: 18px;
+      line-height: 1;
+    }
   }
   &__date-info {
     margin-left: 30px;
     font-weight: 400;
+
+    @media (max-width: $mediaSmallTablets) {
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-width: $mediaSmallDesktops) {
+    justify-content: space-between;
+  }
+  @media (max-width: $mediaSmallTablets) {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 
@@ -62,6 +93,7 @@
   background: #eee;
   height: 35px;
   border-radius: 10px;
+
   transition: 0.7s;
 
   border: 1px solid rgba(197, 197, 197, 0.5);
@@ -91,25 +123,34 @@
   background: rgb(124, 49, 173);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+
+  @media (max-width: $mediaSmallDesktops) {
+    width: 110px;
+  }
 }
 .SkillsBar-title span {
   display: block;
   background: rgba(0, 0, 0, 0.1);
   padding: 0 10px;
-  height: 35px;
+  height: 33px;
   line-height: 35px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   transition: 0.5s;
+
+  @media (max-width: $mediaSmallDesktops) {
+    font-size: 13px;
+  }
 }
 .SkillsBar-bar {
-  height: 35px;
+  height: 33px;
   width: 0px;
   background-color: #9479ab;
   background-image: url('https://www.transparenttextures.com/patterns/nice-snow.png');
   border-radius: 5px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
   animation: animate-SkillsBar 60s infinite;
-
   transition: 0.7s;
   outline: 2px solid transparent;
 }

@@ -169,8 +169,11 @@
       }
     }
 
+    @media (max-width: $mediaTablets) {
+      padding: 10px 12px;
+    }
     @media (max-width: $mediaSmallTablets) {
-      padding: 20px 12px;
+      padding: 20px 10px;
     }
     @media (max-width: $mediaPhones) {
       display: flex;
@@ -178,6 +181,9 @@
       padding: 10px 12px;
       font-size: 18px;
     }
+  }
+  @media (max-width: $mediaSmallTablets) {
+    margin-top: 150px;
   }
   @media (max-width: $mediaPhones) {
     margin-top: 35px;
