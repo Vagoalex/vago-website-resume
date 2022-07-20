@@ -96,12 +96,11 @@
 
   transition: 0.7s;
 
-  border: 1px solid rgba(197, 197, 197, 0.5);
-  outline: 2px solid transparent;
+  border: 2px solid rgba(197, 197, 197, 0.5);
   &:hover {
-    outline: 2px solid rgb(144, 15, 230);
+    border: 2px solid rgb(144, 15, 230);
     .SkillsBar-bar {
-      outline: 2px solid rgb(144, 15, 230);
+      border: 2px solid rgb(144, 15, 230);
     }
     .SkillsBar-percent {
       transform: scale(1.3);
