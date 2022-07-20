@@ -15,7 +15,6 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  min-width: 320px;
   height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -41,11 +40,34 @@ section {
 .wrapper {
   max-width: 1020px;
   margin: 0 auto;
+
+  @media (max-width: $mediaLaptops) {
+    max-width: 965px;
+  }
+  @media (max-width: $mediaSmallDesktops) {
+    max-width: 650px;
+  }
+  @media (max-width: $mediaTablets) {
+    max-width: 625px;
+  }
+  @media (max-width: $mediaSmallTablets) {
+    max-width: 400px;
+  }
+  @media (max-width: $mediaPhones) {
+    max-width: 350px;
+  }
+  @media (max-width: $mediaSmallPhones) {
+    max-width: 260px;
+  }
 }
 
 .columns {
   position: relative;
   padding: 0 20px;
+
+  @media (max-width: $mediaPhones) {
+    padding: 0 5px;
+  }
 }
 
 .pulse {

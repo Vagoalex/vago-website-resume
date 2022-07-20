@@ -5,7 +5,8 @@
   width: 100vw;
   height: 100vh;
   top: 50px;
-  left: 0px;
+  right: 0;
+  left: 0;
   z-index: 100;
   transform: translateX(-130%);
   transition: all 0.5s;
@@ -56,6 +57,7 @@
 
 .BurgerNavList {
   margin-top: 20px;
+  list-style: none;
 
   &__item {
     height: 48px;
