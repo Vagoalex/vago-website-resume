@@ -79,6 +79,10 @@
     right: 0;
     position: absolute;
     z-index: -1;
+
+    @media (max-width: $mediaTablets) {
+      background-image: url('../../../../../assets/images/main-page/header-banner-adaptive.webp');
+    }
   }
 
   @media (max-width: $mediaLaptops) {

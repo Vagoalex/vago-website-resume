@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 
 import data from '../../../../app-data.json';
 import myPhoto from '../../../../assets/images/main-page/about-photo.jpg';
-import myPhotoAdaptive from '../../../../assets/images/main-page/about-photo-adaptive.jpg';
+import myPhotoAdaptive from '../../../../assets/images/main-page/about-photo-adaptive.webp';
 import { ReactComponent as DownloadArrow } from '../../../../assets/icons/about/download-arrow.svg';
 
 import './About.scss';

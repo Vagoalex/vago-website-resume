@@ -1,4 +1,4 @@
-import { Link } from 'react-scroll';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import { useDispatch } from 'react-redux';
 import { onChangeBurgerMenu } from '../../../../../store/nav/navSlice';
 
@@ -7,18 +7,21 @@ import './NavListItem.scss';
 const NavListItem = ({ type, title, pathLink }) => {
   const dispatch = useDispatch();
 
+  const onScroll = () => {
+    dispatch(onChangeBurgerMenu(false));
+    document.body.style.overflow = 'visible';
+    if (title === 'Контакты') scroll.scrollToBottom();
+  };
+
   return (
     <li className={`${type}__item`}>
       <Link
-        onClick={() => {
-          dispatch(onChangeBurgerMenu(false));
-          document.body.style.overflow = 'visible';
-        }}
+        onClick={onScroll}
         activeClass={`${type}-link--active`}
         to={pathLink}
         spy={true}
         smooth={true}
-        duration={300}
+        duration={150}
         name={title}
         className={`${type}-link`}
       >
