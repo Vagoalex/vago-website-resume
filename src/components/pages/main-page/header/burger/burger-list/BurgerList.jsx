@@ -16,7 +16,10 @@ const BurgerList = ({ header }) => {
       className={
         activeBurgerMenu ? 'BurgerList BurgerList--active' : 'BurgerList'
       }
-      onClick={() => dispatch(onChangeBurgerMenu(false))}
+      onClick={() => {
+        dispatch(onChangeBurgerMenu(false));
+        document.body.style.overflow = 'visible';
+      }}
     >
       <div className='BurgerList-blur'></div>
       <div className='BurgerList-content' onClick={(e) => e.stopPropagation()}>

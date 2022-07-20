@@ -1,4 +1,4 @@
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import { useDispatch } from 'react-redux';
 import { onChangeBurgerMenu } from '../../../../../store/nav/navSlice';
 
@@ -10,7 +10,10 @@ const NavListItem = ({ type, title, pathLink }) => {
   return (
     <li className={`${type}__item`}>
       <Link
-        onClick={() => dispatch(onChangeBurgerMenu(false))}
+        onClick={() => {
+          dispatch(onChangeBurgerMenu(false));
+          document.body.style.overflow = 'visible';
+        }}
         activeClass={`${type}-link--active`}
         to={pathLink}
         spy={true}

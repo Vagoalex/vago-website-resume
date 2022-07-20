@@ -10,7 +10,13 @@ const Burger = () => {
   return (
     <div className='NavList Burger'>
       <div
-        onClick={() => dispatch(onChangeBurgerMenu(!activeBurgerMenu))}
+        onClick={() => {
+          !activeBurgerMenu === true
+            ? (document.body.style.overflow = 'hidden')
+            : (document.body.style.overflow = 'visible');
+
+          dispatch(onChangeBurgerMenu(!activeBurgerMenu));
+        }}
         className='Burger-item'
       >
         <span />
