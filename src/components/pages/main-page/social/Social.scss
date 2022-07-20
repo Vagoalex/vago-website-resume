@@ -1,3 +1,5 @@
+@import '../../../../style/variables.scss';
+
 .Social-list {
   list-style-type: none;
   display: flex;
@@ -43,6 +45,10 @@
       background-size: cover;
       background-color: #fff;
       border-radius: 50%;
+    }
+
+    @media (max-width: $mediaSmallDesktops) {
+      padding: 7px;
     }
   }
   &:hover {

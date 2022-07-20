@@ -1,34 +1,17 @@
-import { Link, animateScroll as scroll } from 'react-scroll';
+import NavListItem from '../nav-llist-item/NavListItem';
 import data from '../../../../../app-data.json';
+
 import './NavList.scss';
 
 const navList = data['nav-list'];
 
-const NavList = () => {
+const NavList = ({ type }) => {
   return (
-    <ul className='NavList'>
+    <ul className={type}>
       {navList.map(({ id, ...data }) => (
-        <NavListItem key={id} {...data} />
+        <NavListItem type={type} key={id} {...data} />
       ))}
     </ul>
-  );
-};
-
-const NavListItem = ({ title, pathLink }) => {
-  return (
-    <li className='NavList__item'>
-      <Link
-        activeClass='NavList-link--active'
-        to={pathLink}
-        spy={true}
-        smooth={true}
-        duration={300}
-        name={title}
-        className='NavList-link'
-      >
-        {title}
-      </Link>
-    </li>
   );
 };
 

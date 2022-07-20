@@ -1,5 +1,6 @@
 .MainPage {
   animation: container-main-in 2s linear forwards;
+  overflow-x: hidden;
 }
 
 @keyframes container-main-in {

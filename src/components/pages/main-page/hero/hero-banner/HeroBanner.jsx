@@ -33,8 +33,8 @@ const HeroBanner = () => {
           <p className='Hero-banner-text-about__desk'>{secondDesk}</p>
           <p className='Hero-banner-text-about__desk'>
             <span className='Hero-banner-text-about--company'>{spanDesk}</span>
-            {thirdDesk}
           </p>
+          <p className='Hero-banner-text-about__desk'>{thirdDesk}</p>
         </div>
       </div>
       <div className='Hero-banner-social'>

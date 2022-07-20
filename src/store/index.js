@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+import navReducer from './nav/navSlice';
 import pageReducer from './page/pageSlice';
 import todoReducer from './todoList/todo';
 import filterTodoReducer from './todoList/filterTodo';
@@ -7,6 +8,7 @@ import weatherFavorListReducer from './weather/favorListSlice';
 
 const store = configureStore({
   reducer: {
+    nav: navReducer,
     page: pageReducer,
     todoList: todoReducer,
     filterTodo: filterTodoReducer,

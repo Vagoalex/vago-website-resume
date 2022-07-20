@@ -1,0 +1,66 @@
+.Burger {
+  justify-content: flex-start;
+
+  .Burger-item {
+    position: relative;
+    width: 20px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    animation: burger-item-in 1s linear forwards;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 25px;
+      background-color: rgba(124, 49, 173);
+      height: 4px;
+      border: 2px solid #000;
+    }
+
+    span {
+      position: absolute;
+      top: 11px;
+      width: 29px;
+      background-color: rgba(124, 49, 173);
+      height: 8px;
+      border: 2px solid #000;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 22px;
+      width: 25px;
+      background-color: rgba(124, 49, 173);
+      height: 4px;
+      border: 2px solid #000;
+    }
+
+    &:active {
+      &::before {
+        background-color: rgb(208, 204, 210);
+      }
+      span {
+        background-color: rgb(208, 204, 210);
+      }
+      &::after {
+        background-color: rgb(208, 204, 210);
+      }
+    }
+  }
+}
+
+@keyframes burger-item-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

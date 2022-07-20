@@ -1,3 +1,5 @@
+@import '../../../../style/variables.scss';
+
 .Hero {
   height: 100vh;
   min-height: 500px;
@@ -27,6 +29,13 @@
     right: 0;
     top: 0;
   }
+
+  @media (max-width: $mediaLaptops) {
+    animation: animatedBackground-adaptive-max 50s linear infinite;
+  }
+  // @media (max-width: $mediaSmallDesktops) {
+  //   animation: animatedBackground-adaptive-max 50s linear infinite;
+  // }
 }
 
 .Hero-scroll {
@@ -66,6 +75,28 @@
   }
   100% {
     background-size: 102%;
+  }
+}
+@keyframes animatedBackground-adaptive-max {
+  0% {
+    background-size: auto 102%;
+  }
+  50% {
+    background-size: auto 120%;
+  }
+  100% {
+    background-size: auto 102%;
+  }
+}
+@keyframes animatedBackground-adaptive-mini {
+  0% {
+    background-size: auto 102%;
+  }
+  50% {
+    background-size: auto 120%;
+  }
+  100% {
+    background-size: auto 102%;
   }
 }
 

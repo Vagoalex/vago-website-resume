@@ -1,0 +1,89 @@
+.BurgerList {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 50px;
+  left: 0px;
+  z-index: 100;
+  transform: translateX(-130%);
+  transition: all 0.5s;
+}
+
+.BurgerList--active {
+  transform: translateX(0);
+}
+
+.BurgerList-blur {
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  position: absolute;
+  z-index: -1;
+}
+.BurgerList-content {
+  width: 30%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/nice-snow.png'),
+    #292660;
+
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+  &__header {
+    padding: 10px;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #fff;
+    border-top: 1px solid #000;
+    border-bottom: 3px solid #000;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.BurgerNavList {
+  &__item {
+    height: 48px;
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+
+    animation: nav-item-in 1s linear forwards;
+
+    .BurgerNavList-link {
+      font: 12px 'Open Sans', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+
+      display: inline-block;
+      font-weight: 700;
+      padding: 8px 13px;
+      line-height: 32px;
+      text-decoration: none;
+      text-align: left;
+      color: #fff;
+      text-shadow: 3px 3px 2px rgba(165, 105, 171, 0.7);
+    }
+    .BurgerNavList-link--active {
+      color: rgb(189, 95, 198);
+    }
+    &:hover {
+      transform: scale(1.2);
+      .BurgerNavList-link {
+        text-shadow: none;
+      }
+    }
+  }
+}
+
+@keyframes burger-nav-item-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

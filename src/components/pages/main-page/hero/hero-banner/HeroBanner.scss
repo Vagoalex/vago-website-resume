@@ -1,3 +1,5 @@
+@import '../../../../../style/variables.scss';
+
 .Hero-banner {
   position: absolute;
   top: 50%;
@@ -25,6 +27,20 @@
       text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.9);
       transform: scale(1.2) translateY(-20px) rotate(15deg);
     }
+
+    @media (max-width: $mediaLaptops) {
+      font: 70px/1.1em 'Open Sans', sans-serif;
+      font-style: italic;
+    }
+    @media (max-width: $mediaSmallDesktops) {
+      font-size: 62px;
+      letter-spacing: 1.15px;
+      font-style: italic;
+    }
+  }
+
+  @media (max-width: $mediaSmallDesktops) {
+    margin-bottom: 5px;
   }
 }
 
@@ -53,6 +69,14 @@
     position: absolute;
     z-index: -1;
   }
+
+  @media (max-width: $mediaLaptops) {
+    padding: 10px 10px;
+    margin-bottom: 30px;
+  }
+}
+.Hero-banner-text-about--company {
+  transition: 0.8s;
 }
 
 .Hero-banner-text-about {
@@ -63,14 +87,21 @@
     text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.7);
     text-align: center;
     color: rgb(189, 189, 189);
+
+    @media (max-width: $mediaLaptops) {
+      font: 14px/1.1em 'Open Sans', sans-serif;
+    }
   }
   &:hover {
     transform: scale(1.02);
+    transition: 0.8s;
 
     .Hero-banner-text-about--company {
       transition: 0.8s;
-      color: #000;
-      text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+      color: rgba(124, 49, 173);
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5),
+        0 0 1em rgba(255, 255, 255, 0.5), 0 0 0.2em rgba(255, 255, 255, 0.5);
     }
   }
 }
@@ -91,6 +122,13 @@
       text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.9);
       animation: text-animate 0.6s;
     }
+
+    @media (max-width: $mediaLaptops) {
+      font: 25px/1.1em 'Open Sans', sans-serif;
+    }
+  }
+  @media (max-width: $mediaSmallDesktops) {
+    margin-bottom: 1px;
   }
 }
 .Hero-banner-item-hidden {
