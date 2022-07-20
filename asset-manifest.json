@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vago-website-resume/static/css/main.3252ef58.css",
-    "main.js": "/vago-website-resume/static/js/main.bf992839.js",
-    "static/css/752.c2202409.chunk.css": "/vago-website-resume/static/css/752.c2202409.chunk.css",
+    "main.js": "/vago-website-resume/static/js/main.7a22c896.js",
+    "static/css/752.8e5d89fc.chunk.css": "/vago-website-resume/static/css/752.8e5d89fc.chunk.css",
     "static/js/752.3ebe5565.chunk.js": "/vago-website-resume/static/js/752.3ebe5565.chunk.js",
     "static/css/959.57ae712b.chunk.css": "/vago-website-resume/static/css/959.57ae712b.chunk.css",
     "static/js/959.b2dca9c8.chunk.js": "/vago-website-resume/static/js/959.b2dca9c8.chunk.js",
@@ -58,8 +58,8 @@
     "static/media/item-important.svg": "/vago-website-resume/static/media/item-important.c6e849a28a62a78c1465.svg",
     "static/media/item-important-important.svg": "/vago-website-resume/static/media/item-important-important.08831b7070635158df9c.svg",
     "main.3252ef58.css.map": "/vago-website-resume/static/css/main.3252ef58.css.map",
-    "main.bf992839.js.map": "/vago-website-resume/static/js/main.bf992839.js.map",
-    "752.c2202409.chunk.css.map": "/vago-website-resume/static/css/752.c2202409.chunk.css.map",
+    "main.7a22c896.js.map": "/vago-website-resume/static/js/main.7a22c896.js.map",
+    "752.8e5d89fc.chunk.css.map": "/vago-website-resume/static/css/752.8e5d89fc.chunk.css.map",
     "752.3ebe5565.chunk.js.map": "/vago-website-resume/static/js/752.3ebe5565.chunk.js.map",
     "959.57ae712b.chunk.css.map": "/vago-website-resume/static/css/959.57ae712b.chunk.css.map",
     "959.b2dca9c8.chunk.js.map": "/vago-website-resume/static/js/959.b2dca9c8.chunk.js.map",
@@ -80,6 +80,6 @@
   },
   "entrypoints": [
     "static/css/main.3252ef58.css",
-    "static/js/main.bf992839.js"
+    "static/js/main.7a22c896.js"
   ]
 }
