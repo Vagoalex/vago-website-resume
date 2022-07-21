@@ -1,3 +1,5 @@
+@import '../../style/variables.scss';
+
 .ProjectPage {
   height: 100vh;
   display: flex;
@@ -8,11 +10,20 @@
   width: 100%;
   background-image: url('../../assets/project-page-bg.jpg');
 
-  animation: animatedBackground 15s linear infinite;
+  animation: animated-project-background 15s linear infinite;
+
+  transition: all 0.7s ease;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 102%;
   overflow-y: hidden;
+
+  @media (max-width: 1350px) {
+    animation: animated-project-background-adaptive 50s linear infinite;
+  }
+  @media (max-width: $mediaTablets) {
+    background-image: url('../../assets/project-page-bg-adaptive.webp');
+  }
 }
 .ProjectPage-container {
   margin: 0 auto;
@@ -23,17 +34,56 @@
   border-radius: 25px;
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.6);
   animation: container-in 2s linear forwards;
+
+  transition: all 0.7s ease;
+
+  @media (max-width: $mediaLaptops) {
+    width: 800px;
+    height: 600px;
+  }
+  @media (max-width: $mediaSmallDesktops) {
+    width: 700px;
+    height: 500px;
+  }
+  @media (max-width: $mediaTablets) {
+    width: 600px;
+    height: 650px;
+  }
+  @media (max-width: $mediaSmallTablets) {
+    width: 400px;
+    height: 650px;
+  }
+  @media (max-width: $mediaPhones) {
+    width: 300px;
+    height: 550px;
+  }
+  @media (max-width: $mediaSmallPhones) {
+    width: 250px;
+    height: 550px;
+  }
 }
 
-@keyframes animatedBackground {
+@keyframes animated-project-background {
   0% {
-    background-size: 100%;
+    background-size: 102%;
   }
   50% {
     background-size: 120%;
   }
   100% {
-    background-size: 100%;
+    background-size: 102%;
+  }
+}
+
+@keyframes animated-project-background-adaptive {
+  0% {
+    background-size: auto 102%;
+  }
+  50% {
+    background-size: auto 120%;
+  }
+  100% {
+    background-size: auto 102%;
   }
 }
 

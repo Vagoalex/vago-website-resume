@@ -8,6 +8,21 @@ const { title, pages } = data.projectPages;
 const DefaultProjectsPage = () => {
   return (
     <div className='DefaultProjectsPage'>
+      {/* TODO ADAPTIVE */}
+      <div className='DefaultProjectsPage--adaptive'>
+        <h2>УПС!</h2>
+        <h3>Адаптив пока не готов, возвращайтесь сюда 25 июля!</h3>
+        <p>А пока, можете изучить гит этого проекта</p>
+        <div>
+          <a
+            href='https://github.com/Vagoalex/vago-website-resume'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Git repo link
+          </a>
+        </div>
+      </div>
       <div className='DefaultProjects-title-container'>
         <div className='DefaultProjects-title'>
           {title.map((item, index) => {
