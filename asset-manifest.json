@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/vago-website-resume/static/css/main.70ce95af.css",
-    "main.js": "/vago-website-resume/static/js/main.8e05cc75.js",
-    "static/css/619.eb528ded.chunk.css": "/vago-website-resume/static/css/619.eb528ded.chunk.css",
-    "static/js/619.3aec2a18.chunk.js": "/vago-website-resume/static/js/619.3aec2a18.chunk.js",
+    "main.js": "/vago-website-resume/static/js/main.e2be4d93.js",
+    "static/css/619.8f5b0502.chunk.css": "/vago-website-resume/static/css/619.8f5b0502.chunk.css",
+    "static/js/619.bef749ca.chunk.js": "/vago-website-resume/static/js/619.bef749ca.chunk.js",
     "static/css/959.57ae712b.chunk.css": "/vago-website-resume/static/css/959.57ae712b.chunk.css",
     "static/js/959.b2dca9c8.chunk.js": "/vago-website-resume/static/js/959.b2dca9c8.chunk.js",
     "static/css/446.2617a8bb.chunk.css": "/vago-website-resume/static/css/446.2617a8bb.chunk.css",
@@ -67,9 +67,9 @@
     "static/media/item-important.svg": "/vago-website-resume/static/media/item-important.c6e849a28a62a78c1465.svg",
     "static/media/item-important-important.svg": "/vago-website-resume/static/media/item-important-important.08831b7070635158df9c.svg",
     "main.70ce95af.css.map": "/vago-website-resume/static/css/main.70ce95af.css.map",
-    "main.8e05cc75.js.map": "/vago-website-resume/static/js/main.8e05cc75.js.map",
-    "619.eb528ded.chunk.css.map": "/vago-website-resume/static/css/619.eb528ded.chunk.css.map",
-    "619.3aec2a18.chunk.js.map": "/vago-website-resume/static/js/619.3aec2a18.chunk.js.map",
+    "main.e2be4d93.js.map": "/vago-website-resume/static/js/main.e2be4d93.js.map",
+    "619.8f5b0502.chunk.css.map": "/vago-website-resume/static/css/619.8f5b0502.chunk.css.map",
+    "619.bef749ca.chunk.js.map": "/vago-website-resume/static/js/619.bef749ca.chunk.js.map",
     "959.57ae712b.chunk.css.map": "/vago-website-resume/static/css/959.57ae712b.chunk.css.map",
     "959.b2dca9c8.chunk.js.map": "/vago-website-resume/static/js/959.b2dca9c8.chunk.js.map",
     "446.2617a8bb.chunk.css.map": "/vago-website-resume/static/css/446.2617a8bb.chunk.css.map",
@@ -89,6 +89,6 @@
   },
   "entrypoints": [
     "static/css/main.70ce95af.css",
-    "static/js/main.8e05cc75.js"
+    "static/js/main.e2be4d93.js"
   ]
 }
