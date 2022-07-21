@@ -14,7 +14,11 @@ const NavListItem = ({ type, title, pathLink }) => {
   };
 
   return (
-    <li className={`${type}__item`}>
+    <li
+      className={`${type}__item  ${
+        type === 'NavList' ? 'NavList-items--burger-will-hidden' : ''
+      }`}
+    >
       <Link
         onClick={onScroll}
         activeClass={`${type}-link--active`}

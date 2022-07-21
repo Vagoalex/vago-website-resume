@@ -1,5 +1,3 @@
-import { useSelector } from 'react-redux';
-
 import miniProjectsImg from '../../../../../assets/images/main-page/mini-projects.jpg';
 import heroAdminImg from '../../../../../assets/images/main-page/project-hero-admin-panel.jpg';
 import marvellAppImg from '../../../../../assets/images/main-page/project-marvel-app.jpg';
@@ -9,14 +7,12 @@ import heroAdminImgAdaptive from '../../../../../assets/images/main-page/project
 import marvellAppImgAdaptive from '../../../../../assets/images/main-page/project-marvel-app-adaptive.webp';
 
 const ImageProjectCard = ({ id }) => {
-  const { activeScreenBurgerMenu } = useSelector((state) => state.nav);
-
   switch (id) {
     case 'mini-projects':
       return (
         <img
           src={
-            activeScreenBurgerMenu ? miniProjectsImgAdaptive : miniProjectsImg
+            window.outerWidth <= 768 ? miniProjectsImgAdaptive : miniProjectsImg
           }
           className='Project-img'
           alt='hero-admin-img'
@@ -25,7 +21,7 @@ const ImageProjectCard = ({ id }) => {
     case 'marvel-app':
       return (
         <img
-          src={activeScreenBurgerMenu ? marvellAppImgAdaptive : marvellAppImg}
+          src={window.outerWidth <= 768 ? marvellAppImgAdaptive : marvellAppImg}
           className='Project-img'
           alt='hero-admin-img'
         />
@@ -33,7 +29,7 @@ const ImageProjectCard = ({ id }) => {
     case 'hero-panel':
       return (
         <img
-          src={activeScreenBurgerMenu ? heroAdminImgAdaptive : heroAdminImg}
+          src={window.outerWidth <= 768 ? heroAdminImgAdaptive : heroAdminImg}
           className='Project-img'
           alt='hero-admin-img'
         />

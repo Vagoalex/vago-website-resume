@@ -8,7 +8,7 @@ const Burger = () => {
   const { activeBurgerMenu } = useSelector((state) => state.nav);
 
   return (
-    <div className='NavList Burger'>
+    <div className='Burger'>
       <div
         onClick={() => {
           !activeBurgerMenu === true
