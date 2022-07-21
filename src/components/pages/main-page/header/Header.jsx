@@ -1,22 +1,20 @@
-import { HashLink } from 'react-router-hash-link';
 import NavList from './nav-list/NavList';
-import HeaderBanner from './header-banner/HeaderBanner';
 
 import './Header.scss';
+import Burger from './burger/Burger';
+import BurgerList from './burger/burger-list/BurgerList';
 
 const Header = () => {
   return (
-    <header className='Header' id='home'>
-      <nav className='Header__nav'>
-        <NavList />
-      </nav>
-      <HeaderBanner />
-      <div className='Header-scroll'>
-        <HashLink to={`/#about`} className='Header-scroll__link'>
-          link
-        </HashLink>
-      </div>
-    </header>
+    <>
+      <header className='Header'>
+        <nav className='Header__nav'>
+          <Burger />
+          <NavList type='NavList' />
+        </nav>
+      </header>
+      <BurgerList header='Навигация' />
+    </>
   );
 };
 

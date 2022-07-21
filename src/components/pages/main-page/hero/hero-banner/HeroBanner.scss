@@ -1,0 +1,183 @@
+@import '../../../../../style/variables.scss';
+
+.Hero-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  transition: 1s;
+}
+
+.Hero-banner-title {
+  margin-bottom: 20px;
+  display: flex;
+  text-align: center;
+  &__item {
+    font: 90px/1.1em 'Open Sans', sans-serif;
+    font-style: italic;
+    color: #fff;
+    letter-spacing: -2px;
+    margin: 0 auto 0 auto;
+    text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.7);
+    cursor: pointer;
+
+    transition: all 0.8s ease;
+    &:hover {
+      color: rgb(124, 49, 173);
+      text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.9);
+      transform: scale(1.2) translateY(-20px) rotate(15deg);
+    }
+
+    @media (max-width: $mediaLaptops) {
+      font: 70px/1.1em 'Open Sans', sans-serif;
+      font-style: italic;
+    }
+    @media (max-width: $mediaSmallDesktops) {
+      font: 62px/1.1em 'Open Sans', sans-serif;
+      font-style: italic;
+    }
+    @media (max-width: $mediaSmallTablets) {
+      font: 38px/1.1em 'Open Sans', sans-serif;
+      font-style: italic;
+      margin: 0 2px;
+    }
+    @media (max-width: $mediaPhones) {
+      font: 32px/1.1em 'Open Sans', sans-serif;
+      font-style: italic;
+      margin: 0 2px;
+    }
+  }
+
+  @media (max-width: $mediaSmallTablets) {
+    justify-content: center;
+  }
+}
+
+.Hero-banner-text {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  border: 2px solid rgba(124, 49, 173, 0.7);
+  -webkit-border-radius: 30px;
+
+  padding: 10px 30px;
+  position: relative;
+
+  margin-bottom: 50px;
+
+  &::after {
+    content: '';
+    background: url('../../../../../assets/images/main-page/header-banner.jpg')
+      no-repeat top center;
+    background-size: auto !important;
+
+    border-radius: 30px;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+
+    @media (max-width: $mediaTablets) {
+      background-image: url('../../../../../assets/images/main-page/header-banner-adaptive.webp');
+    }
+  }
+
+  @media (max-width: $mediaLaptops) {
+    padding: 10px 10px;
+    margin-bottom: 30px;
+  }
+  @media (max-width: $mediaSmallTablets) {
+    max-width: 380px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  @media (max-width: $mediaPhones) {
+    max-width: 308px;
+    margin-bottom: 40px;
+  }
+}
+.Hero-banner-text-about--company {
+  transition: 0.8s;
+}
+
+.Hero-banner-text-about {
+  transition: 0.8s;
+
+  &__desk {
+    font: 18px/1.1em 'Open Sans', sans-serif;
+    text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.7);
+    text-align: center;
+    color: rgb(189, 189, 189);
+
+    @media (max-width: $mediaLaptops) {
+      font: 15px/1.1em 'Open Sans', sans-serif;
+    }
+  }
+  &:hover {
+    transform: scale(1.02);
+    transition: 0.8s;
+
+    .Hero-banner-text-about--company {
+      transition: 0.8s;
+      color: rgba(124, 49, 173);
+      font-weight: 700;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5),
+        0 0 1em rgba(255, 255, 255, 0.5), 0 0 0.2em rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.Hero-banner-text-subtitle {
+  display: flex;
+  justify-content: center;
+  &__item {
+    font: 32px/1.1em 'Open Sans', sans-serif;
+    text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.9);
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    transition: all 0.8s ease;
+
+    &:hover {
+      color: rgb(0, 0, 0);
+      text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.9);
+      animation: text-animate 0.6s;
+    }
+
+    @media (max-width: $mediaLaptops) {
+      font: 25px/1.1em 'Open Sans', sans-serif;
+    }
+    @media (max-width: $mediaSmallTablets) {
+      font: 18px/1.1em 'Open Sans', sans-serif;
+    }
+    @media (max-width: $mediaPhones) {
+      font: 16px/1.1em 'Open Sans', sans-serif;
+    }
+  }
+  @media (max-width: $mediaSmallDesktops) {
+    margin-bottom: 1px;
+  }
+}
+.Hero-banner-item-hidden {
+  color: transparent;
+  text-shadow: none;
+  &:hover {
+    color: transparent;
+    text-shadow: none;
+  }
+}
+
+@keyframes text-animate {
+  25% {
+    transform: scale(0.8, 1.3);
+  }
+  50% {
+    transform: scale(1.1, 0.8);
+  }
+  75% {
+    transform: scale(0.7, 1.2);
+  }
+}

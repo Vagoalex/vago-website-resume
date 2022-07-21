@@ -1,15 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const navState = {
-  activeLink: 'Главная',
-};
-
 const navSlice = createSlice({
   name: 'nav',
-  initialState: navState,
+  initialState: {
+    activeBurgerMenu: false,
+  },
   reducers: {
-    changeActiveLink: (state, action) => {
-      state.activeLink = action.payload;
+    onChangeBurgerMenu: (state, action) => {
+      state.activeBurgerMenu = action.payload;
     },
   },
 });
@@ -17,4 +15,4 @@ const navSlice = createSlice({
 const { actions, reducer } = navSlice;
 export default reducer;
 
-export const { changeActiveLink } = actions;
+export const { onChangeBurgerMenu } = actions;

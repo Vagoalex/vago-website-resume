@@ -1,0 +1,77 @@
+@import '../../../../../style/variables.scss';
+
+.Burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transition: all 0.5s ease;
+
+  display: none;
+
+  .Burger-item {
+    position: relative;
+    width: 20px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 25px;
+      background-color: rgba(124, 49, 173);
+      height: 4px;
+      border: 2px solid #3f0876;
+    }
+
+    span {
+      position: absolute;
+      top: 11px;
+      width: 29px;
+      background-color: rgba(124, 49, 173);
+      height: 8px;
+      border: 2px solid #3f0876;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 22px;
+      width: 25px;
+      background-color: rgba(124, 49, 173);
+      height: 4px;
+      border: 2px solid #3f0876;
+    }
+
+    &:active {
+      &::before {
+        background-color: rgb(208, 204, 210);
+      }
+      span {
+        background-color: rgb(208, 204, 210);
+      }
+      &::after {
+        background-color: rgb(208, 204, 210);
+      }
+    }
+  }
+
+  @media (max-width: $mediaTablets) {
+    animation: burger-item-in 1s linear forwards;
+    display: block;
+  }
+}
+
+@keyframes burger-item-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -5,6 +5,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 25px;
+
+  position: relative;
+  overflow: hidden;
+  animation: container-in 2s linear forwards;
 }
 
 .Weather-wrapper {
@@ -24,4 +28,27 @@
 
 .Weather-second {
   flex: 50%;
+}
+
+.Weather-home {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+
+  &__btn {
+    border-radius: 20px;
+
+    padding: 2px 10px;
+    background-color: #a88eaa;
+    font-size: 20px;
+    color: rgb(124, 49, 173);
+    cursor: pointer;
+    animation: pulse-btn 3000ms linear infinite;
+
+    transition: 0.5s;
+
+    &:hover {
+      color: #fff;
+    }
+  }
 }

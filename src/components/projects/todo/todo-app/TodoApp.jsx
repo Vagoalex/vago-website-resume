@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeActivePage } from '../../../../store/page/pageSlice';
+
 import ToDoHeader from '../todo-header/TodoHeader';
 import TodoSearchPanel from '../todo-search-panel/TodoSearchPanel';
 import TodoList from '../todo-list/TodoList';
@@ -9,6 +11,7 @@ import './TodoApp.scss';
 
 const ToDoApp = () => {
   const todoList = useSelector((state) => state.todoList.todoList);
+  const dispatch = useDispatch();
   const [countTodo, setCountTodo] = useState(null);
   const [countDone, setCountDone] = useState(null);
 
@@ -39,6 +42,14 @@ const ToDoApp = () => {
           <TodoList />
           <TodoAddForm />
         </div>
+      </div>
+      <div className='Todo-home'>
+        <button
+          onClick={() => dispatch(changeActivePage('default'))}
+          className='Todo-home__btn'
+        >
+          Нажми, чтобы вернуться назад
+        </button>
       </div>
     </div>
   );

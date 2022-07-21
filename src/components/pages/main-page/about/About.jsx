@@ -1,5 +1,8 @@
+import { useSelector } from 'react-redux';
+
 import data from '../../../../app-data.json';
 import myPhoto from '../../../../assets/images/main-page/about-photo.jpg';
+import myPhotoAdaptive from '../../../../assets/images/main-page/about-photo-adaptive.webp';
 import { ReactComponent as DownloadArrow } from '../../../../assets/icons/about/download-arrow.svg';
 
 import './About.scss';
@@ -13,11 +16,17 @@ const { phoneRef, phoneNumber, phoneTitle } = phone;
 const { mailRef, mailNumber, mailTitle } = mail;
 
 const About = () => {
+  const { activeScreenBurgerMenu } = useSelector((state) => state.nav);
+
   return (
     <section className='About' id='about'>
       <div className='about-container wrapper'>
         <div className='about-img columns'>
-          <img src={myPhoto} alt='my face :)' className='about-img__image' />
+          <img
+            src={activeScreenBurgerMenu ? myPhotoAdaptive : myPhoto}
+            alt='my face :)'
+            className='about-img__image'
+          />
         </div>
         <div className='about-info columns'>
           <div className='about-me'>
@@ -74,11 +83,12 @@ const About = () => {
             </div>
             <div className='about-details-download'>
               <a
-                href='#!'
+                href='https://drive.google.com/file/d/1zagHENHy3cjLjBAdW0rv_lA3pC-ObIrk/view?usp=sharing'
                 className='about-details-download__link'
                 target='_blank'
                 title='Download Resume'
                 download
+                rel='noreferrer'
               >
                 {' '}
                 <span

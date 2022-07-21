@@ -1,0 +1,97 @@
+.DefaultProjectsPage {
+  background-image: url('../../../assets/gifs/project-page3.gif');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+
+  position: relative;
+}
+
+.DefaultProjects-title-container {
+  display: inline-block;
+
+  .DefaultProjects-title {
+    display: flex;
+
+    &__item {
+      font-size: 60px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #191919;
+      text-shadow: 0px 1px 0 rgb(144, 15, 230), 0px -1px 0 rgb(144, 15, 230),
+        1px 0px 0 rgb(144, 15, 230), -1px 0px 0 rgb(144, 15, 230),
+        1px 1px 0 rgb(144, 15, 230), 1px -1px 0 rgb(144, 15, 230),
+        -1px 1px 0 rgb(144, 15, 230), -1px -1px 0 rgb(144, 15, 230);
+
+      cursor: pointer;
+
+      transition: 0.7s;
+
+      &:hover {
+        color: #ffffff;
+        transform: translateY(-7px) translateX(-7px);
+        text-shadow: 6px 6px 0 rgb(144, 15, 230), 0px -1px 0 rgb(144, 15, 230),
+          1px 0px 0 rgb(144, 15, 230), -1px 0px 0 rgb(144, 15, 230),
+          1px 1px 0 rgb(144, 15, 230), 1px -1px 0 rgb(144, 15, 230),
+          -1px 1px 0 rgb(144, 15, 230), -1px -1px 0 rgb(144, 15, 230);
+      }
+    }
+    .DefaultProjects-item-hidden {
+      text-shadow: none;
+      color: transparent;
+    }
+  }
+}
+
+.DefaultProjects-content {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 100px;
+}
+
+.DefaultProjectsPage-home {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+
+  &__btn {
+    border-radius: 20px;
+
+    padding: 5px 10px;
+    background-color: rgb(0, 0, 0);
+    font-size: 20px;
+    color: rgb(124, 49, 173);
+
+    animation: pulse-btn 3000ms linear infinite;
+
+    transition: 0.5s;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+@keyframes pulse-btn {
+  0% {
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px rgb(124, 49, 173);
+  }
+  50% {
+    border: 1px solid rgb(124, 49, 173);
+    box-shadow: 0px 0px 20px rgb(124, 49, 173);
+  }
+  100% {
+    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px rgb(124, 49, 173);
+  }
+}
