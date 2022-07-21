@@ -1,13 +1,29 @@
-import { useSelector } from 'react-redux';
+import { useState, useCallback, useEffect } from 'react';
 import ImageProjectCard from './ImageProjectCard';
 import LinkLiveCard from './LinkLiveCard';
 
 import './ProjectCard.scss';
 
 const ProjectCard = ({ data }) => {
-  const { screenWidth } = useSelector((state) => state.nav);
+  const [screenWidth, setScreenWidth] = useState(0);
   const { desk, adaptiveDesk, git, id, name, seeLive, seeLiveTitle, title } =
     data;
+
+  const trackWidth = useCallback(() => {
+    setScreenWidth(window.outerWidth);
+  }, []);
+
+  useEffect(() => {
+    trackWidth();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('resize', trackWidth);
+    return () => {
+      window.removeEventListener('resize', trackWidth);
+    };
+  }, [trackWidth]);
 
   return (
     <div className='Project-card'>

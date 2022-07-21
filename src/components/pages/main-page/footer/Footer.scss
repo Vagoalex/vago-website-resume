@@ -132,12 +132,11 @@
 .Footer-scroll {
   position: absolute;
   top: -2%;
-  left: 0%;
-  right: 0%;
+  right: 50%;
   color: #fff;
   display: block;
   z-index: 10;
-  transform: translate(50%, 0%);
+  transform: translateX(50%);
 
   &__link {
     color: transparent;
@@ -155,15 +154,6 @@
       background-repeat: no-repeat;
       background-size: auto;
     }
-  }
-  @media (max-width: $mediaSmallDesktops) {
-    transform: translate(46%, 0%);
-  }
-  @media (max-width: $mediaTablets) {
-    transform: translate(44%, 0%);
-  }
-  @media (max-width: $mediaPhones) {
-    transform: translate(42%, 0%);
   }
 }
 
