@@ -16,6 +16,7 @@ const ImageProjectCard = ({ id }) => {
           }
           className='Project-img'
           alt='hero-admin-img'
+          loading='lazy'
         />
       );
     case 'marvel-app':
@@ -24,6 +25,7 @@ const ImageProjectCard = ({ id }) => {
           src={window.outerWidth <= 768 ? marvellAppImgAdaptive : marvellAppImg}
           className='Project-img'
           alt='hero-admin-img'
+          loading='lazy'
         />
       );
     case 'hero-panel':
@@ -32,6 +34,7 @@ const ImageProjectCard = ({ id }) => {
           src={window.outerWidth <= 768 ? heroAdminImgAdaptive : heroAdminImg}
           className='Project-img'
           alt='hero-admin-img'
+          loading='lazy'
         />
       );
 

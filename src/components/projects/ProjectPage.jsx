@@ -21,7 +21,7 @@ const ProjectPage = () => {
   return (
     <section className='ProjectPage'>
       <div className='ProjectPage-container'>
-        <Suspense fallback={<LoadingPage />}>
+        <Suspense fallback={<LoadingProjectPage />}>
           {defaultPage}
           {todoPage}
           {weatherPage}
@@ -29,6 +29,14 @@ const ProjectPage = () => {
       </div>
     </section>
   );
+};
+
+const LoadingProjectPage = () => {
+  <>
+    <div className='LoadingProjectPage'>
+      <h2 className='LoadingProjectPage__title'>Loading...</h2>
+    </div>
+  </>;
 };
 
 export default ProjectPage;

@@ -35,14 +35,6 @@
 
 .NavList-items--burger-will-hidden {
   @media (max-width: $mediaTablets) {
-    animation: nav-item-hide 1s linear forwards;
-  }
-}
-
-@keyframes nav-item-hide {
-  100% {
-    transform: translateY(-50px);
-    opacity: 0;
     display: none;
   }
 }
