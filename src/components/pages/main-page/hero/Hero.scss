@@ -5,7 +5,7 @@
   min-height: 500px;
   width: 100%;
 
-  background-image: url('../../../../assets/images/main-page/header-background2.jpg');
+  background-image: url('../../../../assets/images/main-page/header-background2-adaptive.webp');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 102%;
@@ -32,9 +32,6 @@
 
   @media (max-width: $mediaLaptops) {
     animation: animatedBackground-adaptive-max 50s linear infinite;
-  }
-  @media (max-width: $mediaTablets) {
-    background-image: url('../../../../assets/images/main-page/header-background2-adaptive.webp');
   }
 }
 

@@ -2,16 +2,13 @@
 
 .Loader {
   height: 100vh;
-  background: url('../../../assets/images/loading-page/space.jpg');
+  background: url('../../../assets/images/loading-page/space-adaptive.webp');
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   animation: loading-in 1000ms linear forwards;
-
-  @media (max-width: $mediaTablets) {
-    background: url('../../../assets/images/loading-page/space-adaptive.webp');
-  }
 }
 
 .loader-wrapper {
@@ -72,27 +69,12 @@
   left: 10px;
   right: 10px;
   bottom: 10px;
-  background: url('../../../assets/images/loading-page/red-circle.jpg');
+  background: url('../../../assets/images/loading-page/red-circle-adaptive.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border: solid #000 2px;
   border-radius: 50%;
-
-  @media (max-width: $mediaTablets) {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    background: url('../../../assets/images/loading-page/red-circle-adaptive.webp');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: solid #000 2px;
-    border-radius: 50%;
-  }
 }
 
 @keyframes loading-in {
