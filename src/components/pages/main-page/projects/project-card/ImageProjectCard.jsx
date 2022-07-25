@@ -1,39 +1,54 @@
-import miniProjectsImg from '../../../../../assets/images/main-page/mini-projects.jpg';
-import heroAdminImg from '../../../../../assets/images/main-page/project-hero-admin-panel.jpg';
-import marvellAppImg from '../../../../../assets/images/main-page/project-marvel-app.jpg';
+import idaprojectImg from '../../../../../assets/images/main-page/idaproject-adaptive.webp';
+import welbexImg from '../../../../../assets/images/main-page/welbex-adaptive.webp';
 
-import miniProjectsImgAdaptive from '../../../../../assets/images/main-page/mini-projects-adaptive.webp';
-import heroAdminImgAdaptive from '../../../../../assets/images/main-page/project-hero-admin-panel-adaptive.webp';
-import marvellAppImgAdaptive from '../../../../../assets/images/main-page/project-marvel-app-adaptive.webp';
+import miniProjectsImg from '../../../../../assets/images/main-page/mini-projects-adaptive.webp';
+import heroAdminImg from '../../../../../assets/images/main-page/project-hero-admin-panel-adaptive.webp';
+import marvellAppImg from '../../../../../assets/images/main-page/project-marvel-app-adaptive.webp';
 
 const ImageProjectCard = ({ id }) => {
   switch (id) {
+    case 'welbex':
+      return (
+        <img
+          src={welbexImg}
+          className='Project-img'
+          alt='welbex'
+          loading='lazy'
+        />
+      );
+    case 'idaproject':
+      return (
+        <img
+          src={idaprojectImg}
+          className='Project-img'
+          alt='idaproject'
+          loading='lazy'
+        />
+      );
     case 'mini-projects':
       return (
         <img
-          src={
-            window.outerWidth <= 768 ? miniProjectsImgAdaptive : miniProjectsImg
-          }
+          src={miniProjectsImg}
           className='Project-img'
-          alt='hero-admin-img'
+          alt='mini-projects'
           loading='lazy'
         />
       );
     case 'marvel-app':
       return (
         <img
-          src={window.outerWidth <= 768 ? marvellAppImgAdaptive : marvellAppImg}
+          src={marvellAppImg}
           className='Project-img'
-          alt='hero-admin-img'
+          alt='marvel-app'
           loading='lazy'
         />
       );
     case 'hero-panel':
       return (
         <img
-          src={window.outerWidth <= 768 ? heroAdminImgAdaptive : heroAdminImg}
+          src={heroAdminImg}
           className='Project-img'
-          alt='hero-admin-img'
+          alt='hero-panel'
           loading='lazy'
         />
       );

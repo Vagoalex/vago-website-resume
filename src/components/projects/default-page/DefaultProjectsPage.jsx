@@ -11,7 +11,7 @@ const DefaultProjectsPage = () => {
       {/* TODO ADAPTIVE */}
       <div className='DefaultProjectsPage--adaptive'>
         <h2>УПС!</h2>
-        <h3>Адаптив пока не готов, возвращайтесь сюда 25 июля!</h3>
+        <h3>Адаптив пока не готов, возвращайтесь сюда 27 июля!</h3>
         <p>А пока, можете изучить гит этого проекта</p>
         <div>
           <a

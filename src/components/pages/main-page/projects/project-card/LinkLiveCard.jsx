@@ -8,6 +8,30 @@ const LinkLiveCard = ({ id, link, liveTitle }) => {
           see live
         </Link>
       );
+    case 'welbex':
+      return (
+        <a
+          href={link}
+          className='Project-btn live'
+          target='_blank'
+          rel='noreferrer'
+          title={liveTitle}
+        >
+          see live
+        </a>
+      );
+    case 'idaproject':
+      return (
+        <a
+          href={link}
+          className='Project-btn live'
+          target='_blank'
+          rel='noreferrer'
+          title={liveTitle}
+        >
+          see live
+        </a>
+      );
     case 'marvel-app':
       return (
         <a

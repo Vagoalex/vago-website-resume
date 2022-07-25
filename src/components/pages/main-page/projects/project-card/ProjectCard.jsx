@@ -19,6 +19,10 @@ const ProjectCard = ({ data }) => {
   }, []);
 
   useEffect(() => {
+    setScreenWidth(window.outerWidth);
+  }, []);
+
+  useEffect(() => {
     window.addEventListener('resize', trackWidth);
     return () => {
       window.removeEventListener('resize', trackWidth);
