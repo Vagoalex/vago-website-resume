@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from 'react';
+import { lazy, memo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeActiveTab } from '../../../../store/weather/weather';
 import './WeatherTabs.scss';
@@ -48,4 +48,4 @@ const WeatherTabs = () => {
   );
 };
 
-export default WeatherTabs;
+export default memo(WeatherTabs);

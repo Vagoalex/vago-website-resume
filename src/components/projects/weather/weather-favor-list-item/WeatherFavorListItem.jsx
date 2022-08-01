@@ -20,7 +20,13 @@ const WeatherFavorListItem = ({ onDeleteFavor, name }) => {
         className='WeatherFavorListItem'
       >
         {name}
-        <div onClick={onDeleteFavor} className='WeatherFavorListItem-delete'>
+        <div
+          onClick={(e) => {
+            e.stopPropagation();
+            onDeleteFavor(e);
+          }}
+          className='WeatherFavorListItem-delete'
+        >
           <span className='WeatherFavorListItem-delete__element'></span>
         </div>
       </li>

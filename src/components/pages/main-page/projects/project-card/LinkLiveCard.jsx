@@ -8,42 +8,7 @@ const LinkLiveCard = ({ id, link, liveTitle }) => {
           see live
         </Link>
       );
-    case 'welbex':
-      return (
-        <a
-          href={link}
-          className='Project-btn live'
-          target='_blank'
-          rel='noreferrer'
-          title={liveTitle}
-        >
-          see live
-        </a>
-      );
-    case 'idaproject':
-      return (
-        <a
-          href={link}
-          className='Project-btn live'
-          target='_blank'
-          rel='noreferrer'
-          title={liveTitle}
-        >
-          see live
-        </a>
-      );
-    case 'marvel-app':
-      return (
-        <a
-          href={link}
-          className='Project-btn live'
-          target='_blank'
-          rel='noreferrer'
-          title={liveTitle}
-        >
-          see live
-        </a>
-      );
+
     case 'hero-panel':
       return (
         <a
@@ -58,7 +23,17 @@ const LinkLiveCard = ({ id, link, liveTitle }) => {
       );
 
     default:
-      throw new Error('Invalid id');
+      return (
+        <a
+          href={link}
+          className='Project-btn live'
+          target='_blank'
+          rel='noreferrer'
+          title={liveTitle}
+        >
+          see live
+        </a>
+      );
   }
 };
 

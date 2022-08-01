@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeActivePage } from '../../../../store/page/pageSlice';
 
@@ -55,4 +55,4 @@ const ToDoApp = () => {
   );
 };
 
-export default ToDoApp;
+export default memo(ToDoApp);

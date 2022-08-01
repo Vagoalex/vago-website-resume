@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { useCallback, memo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { createSelector } from 'reselect';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -33,7 +33,6 @@ const TodoList = () => {
   const onDeleteTodo = useCallback(
     (id) => {
       dispatch(deleteTodo(id));
-      console.log(id);
     },
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -95,4 +94,4 @@ const TodoList = () => {
   );
 };
 
-export default TodoList;
+export default memo(TodoList);

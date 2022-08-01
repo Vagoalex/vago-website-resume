@@ -1,11 +1,12 @@
 @import '../../../../../style/variables.scss';
+@import '../../../../../style/mixins.scss';
 
 .Burger {
   position: absolute;
   top: 0;
   left: 0;
 
-  transition: all 0.5s ease;
+  @include crossBrowser(transition, all 0.5s ease);
 
   display: none;
 
@@ -60,18 +61,30 @@
   }
 
   @media (max-width: $mediaTablets) {
+    -webkit-animation: burger-item-in 1s linear forwards;
     animation: burger-item-in 1s linear forwards;
     display: block;
+  }
+}
+
+@-webkit-keyframes burger-item-in {
+  0% {
+    opacity: 0;
+    @include crossBrowser(transform, translateX(-150%));
+  }
+  100% {
+    opacity: 1;
+    @include crossBrowser(transform, translateX(0));
   }
 }
 
 @keyframes burger-item-in {
   0% {
     opacity: 0;
-    transform: translateX(-150%);
+    @include crossBrowser(transform, translateX(-150%));
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    @include crossBrowser(transform, translateX(0));
   }
 }

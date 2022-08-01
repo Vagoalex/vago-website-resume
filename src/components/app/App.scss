@@ -1,21 +1,5 @@
+@import '../../style/mixins.scss';
+
 .App {
-  transition: 1s;
+  @include crossBrowser(transition, all 1s ease);
 }
-
-// .fade-enter {
-//   opacity: 0;
-//   z-index: 1;
-// }
-// .fade-enter.fade-enter-active {
-//   opacity: 1;
-
-//   transition: opacity 1000ms ease;
-// }
-// .fade-exit {
-//   opacity: 1;
-// }
-// .fade-exit.fade-exit-active {
-//   opacity: 0;
-
-//   transition: opacity 1000ms ease;
-// }

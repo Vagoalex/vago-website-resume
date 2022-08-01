@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeActiveFilter } from '../../../../store/todoList/filterTodo';
 import './TodoSearchPanel.scss';
@@ -37,4 +38,4 @@ const TodoSearchPanel = () => {
   );
 };
 
-export default TodoSearchPanel;
+export default memo(TodoSearchPanel);

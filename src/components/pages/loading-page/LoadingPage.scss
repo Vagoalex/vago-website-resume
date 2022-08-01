@@ -1,4 +1,5 @@
 @import '../../../style/variables.scss';
+@import '../../../style/mixins.scss';
 
 .Loader {
   height: 100vh;
@@ -8,6 +9,8 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  -webkit-animation: loading-in 1000ms linear forwards;
+
   animation: loading-in 1000ms linear forwards;
 }
 
@@ -15,7 +18,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  @include crossBrowser(transform, translate(-50%, -50%));
+
+  -webkit-animation: loading-in 1000ms linear forwards;
 
   animation: loading-in 1000ms linear forwards;
 }
@@ -25,16 +30,35 @@
   width: 350px;
   height: 350px;
   border-radius: 50%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f07e6e),
+    color-stop(#84cdfa),
+    to(#5ad1cd)
+  );
+  background: -o-linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
   background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
+  -webkit-animation: animate 1.2s linear infinite;
   animation: animate 1.2s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    @include crossBrowser(transform, rotate(0deg));
+  }
+  100% {
+    @include crossBrowser(transform, rotate(360deg));
+  }
 }
 
 @keyframes animate {
   0% {
-    transform: rotate(0deg);
+    @include crossBrowser(transform, rotate(0deg));
   }
   100% {
-    transform: rotate(360deg);
+    @include crossBrowser(transform, rotate(360deg));
   }
 }
 
@@ -43,22 +67,35 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f07e6e),
+    color-stop(#84cdfa),
+    to(#5ad1cd)
+  );
+  background: -o-linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
   background: linear-gradient(#f07e6e, #84cdfa, #5ad1cd);
 }
 
 .loader span:nth-child(1) {
+  -webkit-filter: blur(5px);
   filter: blur(5px);
 }
 
 .loader span:nth-child(2) {
+  -webkit-filter: blur(10px);
   filter: blur(10px);
 }
 
 .loader span:nth-child(3) {
+  -webkit-filter: blur(25px);
   filter: blur(25px);
 }
 
 .loader span:nth-child(4) {
+  -webkit-filter: blur(50px);
   filter: blur(50px);
 }
 
@@ -75,6 +112,15 @@
   background-size: cover;
   border: solid #000 2px;
   border-radius: 50%;
+}
+
+@-webkit-keyframes loading-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes loading-in {

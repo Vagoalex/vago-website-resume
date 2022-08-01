@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import './TodoListItem.scss';
 
 const defaultButtonImportantClasses =
@@ -11,7 +12,6 @@ const TodoListItem = ({
   text,
   important,
   done,
-  removeTodoItem,
   onToggleValue,
   onDeleteTodo,
 }) => {
@@ -63,4 +63,4 @@ const TodoListItem = ({
   );
 };
 
-export default TodoListItem;
+export default memo(TodoListItem);

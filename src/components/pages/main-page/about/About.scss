@@ -1,4 +1,5 @@
 @import '../../../../style/variables.scss';
+@import '../../../../style/mixins.scss';
 
 .About {
   background: rgb(17, 8, 21);
@@ -9,7 +10,6 @@
   border-top: 3px solid #000;
 
   position: relative;
-  transition: all 1s ease;
 
   @media (max-width: $mediaSmallTablets) {
     padding-bottom: 200px;
@@ -17,17 +17,24 @@
 }
 
 .about-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   line-height: 30px;
   color: rgb(152, 123, 171);
 
-  transition: all 1s ease;
+  @include crossBrowser(transition, all 1s ease);
 
   @media (max-width: $mediaSmallTablets) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 .about-img {
+  -webkit-box-flex: 25%;
+  -ms-flex: 25%;
   flex: 25%;
 
   &__image {
@@ -36,41 +43,47 @@
     border-radius: 25%;
     border: 1px solid rgb(152, 123, 171);
 
-    transition: all 1.1s ease;
+    @include crossBrowser(transition, all 1.1s ease);
 
     &:hover {
-      transform: scale(1.6) translateY(30px);
+      @include crossBrowser(transform, scale(1.6) translateY(30px));
     }
     @media (max-width: $mediaLaptops) {
       &:hover {
-        transform: scale(1.3) translateY(30px);
+        @include crossBrowser(transform, scale(1.3) translateY(30px));
       }
     }
     @media (max-width: $mediaSmallTablets) {
       &:hover {
-        transform: scale(1.5) translate(-25px, -30px);
+        @include crossBrowser(transform, scale(1.5) translate(-25px, -30px));
       }
     }
     @media (max-width: $mediaPhones) {
       &:hover {
-        transform: scale(1.3) translate(-15px, -50px);
+        @include crossBrowser(transform, scale(1.3) translate(-15px, -50px));
       }
     }
     @media (max-width: $mediaSmallPhones) {
       max-width: 125px;
       z-index: 100;
       &:hover {
-        transform: scale(1.5) translate(-18px, -23px);
+        @include crossBrowser(transform, scale(1.5) translate(-18px, -23px));
       }
     }
   }
 
   @media (max-width: $mediaSmallTablets) {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
   }
 }
 .about-info {
+  -webkit-box-flex: 75%;
+  -ms-flex: 75%;
   flex: 75%;
 
   @media (max-width: $mediaSmallTablets) {
@@ -81,7 +94,8 @@
   margin-bottom: 20px;
 
   &__desk {
-    transition: all 1s ease;
+    @include crossBrowser(transition, all 1s ease);
+
     line-height: 30px;
     text-align: justify;
     color: rgb(152, 123, 171);
@@ -97,26 +111,33 @@
 }
 
 .about-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
   @media (max-width: $mediaPhones) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
 }
 .about-details-contacts {
+  -webkit-box-flex: 45%;
+  -ms-flex: 45%;
   flex: 45%;
 
   &__desk {
     .about-details-contacts-phone {
       color: rgb(123, 33, 184);
-      transition: all 0.7s ease;
+      @include crossBrowser(transition, all 0.7s ease);
       &:hover {
         color: #fff;
       }
     }
     .about-details-contacts-mail {
       color: rgb(123, 33, 184);
-      transition: all 0.7s ease;
+      @include crossBrowser(transition, all 0.7s ease);
       &:hover {
         color: #fff;
       }
@@ -127,6 +148,8 @@
   }
 }
 .about-details-download {
+  -webkit-box-flex: 55%;
+  -ms-flex: 55%;
   flex: 55%;
 
   margin-top: 70px;
@@ -141,7 +164,7 @@
     text-decoration: none;
     color: #fff;
 
-    transition: 0.7s;
+    @include crossBrowser(transition, all 0.7s ease);
 
     .about-details-download-icon {
       width: 30px;
@@ -150,9 +173,11 @@
       vertical-align: middle;
       margin-right: 20px;
 
-      transition: 0.7s;
+      @include crossBrowser(transition, all 0.7s ease);
+
       svg {
-        transition: 0.7s;
+        @include crossBrowser(transition, all 0.7s ease);
+
         fill: #fff;
       }
     }
@@ -176,7 +201,11 @@
       padding: 20px 10px;
     }
     @media (max-width: $mediaPhones) {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
       padding: 10px 12px;
       font-size: 18px;
@@ -191,6 +220,8 @@
 }
 
 .about-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
   color: #fff;
@@ -203,10 +234,11 @@
     text-shadow: 4px 4px 3px rgb(124 49 173 / 90%);
     cursor: pointer;
 
-    transition: all 0.8s ease;
+    @include crossBrowser(transition, all 0.8s ease);
 
     &:hover {
       text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.9);
+      -webkit-animation: text-animate 0.6s;
       animation: text-animate 0.6s;
     }
     @media (max-width: $mediaSmallTablets) {

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import './TodoHeader.scss';
 
 const TodoHeader = ({ todo, done }) => {
@@ -18,4 +19,4 @@ const TodoHeader = ({ todo, done }) => {
   );
 };
 
-export default TodoHeader;
+export default memo(TodoHeader);

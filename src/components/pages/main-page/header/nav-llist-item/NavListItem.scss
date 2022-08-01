@@ -1,10 +1,13 @@
 @import '../../../../../style/variables.scss';
+@import '../../../../../style/mixins.scss';
 
 .NavList__item {
   height: 48px;
   cursor: pointer;
 
-  transition: all 0.4s ease;
+  @include crossBrowser(transition, all 0.4s ease);
+
+  -webkit-animation: nav-item-in 1s linear forwards;
 
   animation: nav-item-in 1s linear forwards;
 
@@ -26,7 +29,8 @@
     color: rgb(189, 95, 198);
   }
   &:hover {
-    transform: scale(1.2);
+    @include crossBrowser(transform, scale(1.2));
+
     .NavList-link {
       text-shadow: none;
     }
@@ -36,6 +40,15 @@
 .NavList-items--burger-will-hidden {
   @media (max-width: $mediaTablets) {
     display: none;
+  }
+}
+
+@-webkit-keyframes nav-item-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

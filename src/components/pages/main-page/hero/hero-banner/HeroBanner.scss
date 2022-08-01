@@ -1,16 +1,19 @@
 @import '../../../../../style/variables.scss';
+@import '../../../../../style/mixins.scss';
 
 .Hero-banner {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  @include crossBrowser(transform, translate(-50%, -50%));
   color: #fff;
-  transition: 1s;
+  @include crossBrowser(transition, all 1s ease);
 }
 
 .Hero-banner-title {
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
   &__item {
@@ -22,11 +25,19 @@
     text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.7);
     cursor: pointer;
 
+    -webkit-transition: all 0.8s ease;
+
+    -o-transition: all 0.8s ease;
+
     transition: all 0.8s ease;
     &:hover {
       color: rgb(124, 49, 173);
       text-shadow: 6px 6px 12px rgba(0, 0, 0, 0.9);
-      transform: scale(1.2) translateY(-20px) rotate(15deg);
+
+      @include crossBrowser(
+        transform,
+        scale(1.2) translateY(-20px) rotate(15deg)
+      );
     }
 
     @media (max-width: $mediaLaptops) {
@@ -50,6 +61,8 @@
   }
 
   @media (max-width: $mediaSmallTablets) {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 }
@@ -96,13 +109,14 @@
   }
 }
 .Hero-banner-text-about--company {
-  transition: 0.8s;
+  @include crossBrowser(transition, all 0.8s ease);
 }
 
 .Hero-banner-text-about {
-  transition: 0.8s;
+  @include crossBrowser(transition, all 0.8s ease);
 
   &__desk {
+    @include crossBrowser(transition, all 0.8s ease);
     font: 18px/1.1em 'Open Sans', sans-serif;
     text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.7);
     text-align: center;
@@ -113,11 +127,11 @@
     }
   }
   &:hover {
-    transform: scale(1.02);
-    transition: 0.8s;
+    @include crossBrowser(transform, scale(1.02));
+    @include crossBrowser(transition, all 0.8s ease);
 
     .Hero-banner-text-about--company {
-      transition: 0.8s;
+      @include crossBrowser(transition, all 0.8s ease);
       color: rgba(124, 49, 173);
       font-weight: 700;
       text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5),
@@ -127,7 +141,11 @@
 }
 
 .Hero-banner-text-subtitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   &__item {
     font: 32px/1.1em 'Open Sans', sans-serif;
@@ -135,11 +153,12 @@
     margin-bottom: 10px;
     cursor: pointer;
 
-    transition: all 0.8s ease;
+    @include crossBrowser(transition, all 0.8s ease);
 
     &:hover {
       color: rgb(0, 0, 0);
       text-shadow: 4px 4px 3px rgba(124, 49, 173, 0.9);
+      -webkit-animation: text-animate 0.6s;
       animation: text-animate 0.6s;
     }
 
@@ -166,14 +185,26 @@
   }
 }
 
-@keyframes text-animate {
+@-webkit-keyframes text-animate {
   25% {
-    transform: scale(0.8, 1.3);
+    @include crossBrowser(transform, scale(0.8, 1.3));
   }
   50% {
-    transform: scale(1.1, 0.8);
+    @include crossBrowser(transform, scale(1.1, 0.8));
   }
   75% {
-    transform: scale(0.7, 1.2);
+    @include crossBrowser(transform, scale(0.7, 1.2));
+  }
+}
+
+@keyframes text-animate {
+  25% {
+    @include crossBrowser(transform, scale(0.8, 1.3));
+  }
+  50% {
+    @include crossBrowser(transform, scale(1.1, 0.8));
+  }
+  75% {
+    @include crossBrowser(transform, scale(0.7, 1.2));
   }
 }

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addTodo, plusCounter } from '../../../../store/todoList/todo';
 import { useFormik } from 'formik';
@@ -56,4 +57,4 @@ const TodoAddForm = () => {
   );
 };
 
-export default TodoAddForm;
+export default memo(TodoAddForm);

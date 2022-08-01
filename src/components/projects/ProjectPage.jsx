@@ -1,7 +1,5 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, memo } from 'react';
 import { useSelector } from 'react-redux';
-
-import LoadingPage from '../pages/loading-page/LoadingPage';
 
 import './ProjectPage.scss';
 
@@ -39,4 +37,4 @@ const LoadingProjectPage = () => {
   </>;
 };
 
-export default ProjectPage;
+export default memo(ProjectPage);
