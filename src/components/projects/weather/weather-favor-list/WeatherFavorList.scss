@@ -1,5 +1,12 @@
+@import '../../../../style/mixins.scss';
+
 .WeatherFavorList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
   overflow: hidden;
@@ -21,7 +28,12 @@
     text-align: left;
     padding: 10px 20px;
     margin: 20px 10px 10px -5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 
     &::-webkit-scrollbar {
@@ -37,6 +49,7 @@
     position: absolute;
     top: 14%;
     left: 4%;
+    -webkit-animation: favorList-lineFirst-in 5s linear forwards;
     animation: favorList-lineFirst-in 5s linear forwards;
   }
   &:after {
@@ -47,39 +60,73 @@
     position: absolute;
     top: 14%;
     right: 0%;
+    -webkit-animation: favorList-lineSecond-in 7s linear forwards;
     animation: favorList-lineSecond-in 7s linear forwards;
+  }
+}
+
+@-webkit-keyframes favorList-lineFirst-in {
+  0% {
+    opacity: 0;
+    @include crossBrowser(transform, translateX(-100%));
+  }
+  75% {
+    opacity: 0;
+    @include crossBrowser(transform, translateX(-100%));
+  }
+
+  100% {
+    opacity: 1;
+    @include crossBrowser(transform, translateX(0%));
   }
 }
 
 @keyframes favorList-lineFirst-in {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    @include crossBrowser(transform, translateX(-100%));
   }
   75% {
     opacity: 0;
-    transform: translateX(-100%);
+    @include crossBrowser(transform, translateX(-100%));
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0);
+    @include crossBrowser(transform, translateX(0%));
   }
 }
-@keyframes favorList-lineSecond-in {
+@-webkit-keyframes favorList-lineSecond-in {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    @include crossBrowser(transform, translateX(-100%));
   }
   75% {
     opacity: 0;
-    transform: translateY(0%);
+    @include crossBrowser(transform, translateY(0%));
     height: 0%;
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
+    @include crossBrowser(transform, translateY(0%));
+    height: 86%;
+  }
+}
+@keyframes favorList-lineSecond-in {
+  0% {
+    opacity: 0;
+    @include crossBrowser(transform, translateX(-100%));
+  }
+  75% {
+    opacity: 0;
+    @include crossBrowser(transform, translateY(0%));
+    height: 0%;
+  }
+
+  100% {
+    opacity: 1;
+    @include crossBrowser(transform, translateY(0%));
     height: 86%;
   }
 }
@@ -94,30 +141,53 @@
 }
 
 .favorItem-transition-enter-active {
+  -webkit-animation: favorItem-in 1500ms forwards;
   animation: favorItem-in 1500ms forwards;
 }
 
 .favorItem-transition-exit-active {
+  -webkit-animation: favorItem-out 1500ms forwards;
   animation: favorItem-out 1500ms forwards;
+}
+
+@-webkit-keyframes favorItem-in {
+  0% {
+    opacity: 0;
+    @include crossBrowser(transform, translateX(-150%));
+  }
+  100% {
+    opacity: 1;
+    @include crossBrowser(transform, translateX(0%));
+  }
 }
 
 @keyframes favorItem-in {
   0% {
     opacity: 0;
-    transform: translateX(-150px);
+    @include crossBrowser(transform, translateX(-150%));
   }
   100% {
     opacity: 1;
-    transform: translateX(0px);
+    @include crossBrowser(transform, translateX(0%));
+  }
+}
+@-webkit-keyframes favorItem-out {
+  0% {
+    opacity: 1;
+    @include crossBrowser(transform, translateX(0%));
+  }
+  100% {
+    opacity: 0;
+    @include crossBrowser(transform, translateX(150%));
   }
 }
 @keyframes favorItem-out {
   0% {
     opacity: 1;
-    transform: translateX(0px);
+    @include crossBrowser(transform, translateX(0%));
   }
   100% {
     opacity: 0;
-    transform: translateX(150px);
+    @include crossBrowser(transform, translateX(150%));
   }
 }

@@ -1,10 +1,11 @@
 @import '../../../../../style/variables.scss';
+@import '../../../../../style/mixins.scss';
 
 .Project-card {
   height: 400px;
   position: relative;
 
-  transition: all 1s ease;
+  @include crossBrowser(transition, all 1s ease);
 
   @media (max-width: $mediaSmallDesktops) {
     height: 275px;
@@ -29,18 +30,22 @@
   left: 0;
   border-radius: 20px;
   border: 1px solid rgb(124, 49, 173);
+  -webkit-box-shadow: 10px 10px 10px rgb(124, 49, 173);
   box-shadow: 10px 10px 10px rgb(124, 49, 173);
+  -o-object-fit: cover;
   object-fit: cover;
-  transition: 0.5s;
+  @include crossBrowser(transition, all 0.5s ease);
 }
 .Project-content {
   position: relative;
   padding: 5px;
   color: #fff;
-  transition: 0.5s;
   height: 400px;
 
+  @include crossBrowser(transition, all 0.5s ease);
+
   background: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 
@@ -87,7 +92,9 @@
   }
 }
 .Project-btn-grp {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 
@@ -97,8 +104,15 @@
   right: 0;
 }
 .Project-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
   height: 40px;
@@ -109,7 +123,7 @@
   color: #fff;
   cursor: pointer;
 
-  transition: 0.5s;
+  @include crossBrowser(transition, all 0.5s ease);
 
   &:hover {
     border: 2px solid rgb(124, 49, 173);
@@ -122,6 +136,7 @@
   border: 2px solid #fff;
 }
 .Project-card:hover .Project-img {
+  -webkit-filter: blur(20px);
   filter: blur(20px);
 }
 .Project-card:hover .Project-content {

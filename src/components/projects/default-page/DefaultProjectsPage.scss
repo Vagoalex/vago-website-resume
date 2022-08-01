@@ -1,4 +1,5 @@
 @import '../../../style/variables.scss';
+@import '../../../style/mixins.scss';
 
 .DefaultProjectsPage {
   background-image: url('../../../assets/gifs/project-page3-adaptive.gif');
@@ -8,28 +9,27 @@
   height: 100%;
   border-radius: 25px;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 80px 20px;
 
   position: relative;
 
-  transition: all 0.7s ease;
+  @include crossBrowser(transition, all 0.7s ease);
 
   @media (max-width: $mediaLaptops) {
     padding: 80px 20px;
   }
-  //   @media (max-width: $mediaSmallDesktops) {
-  //     font: 62px/1.1em 'Open Sans', sans-serif;
-  //     font-style: italic;
-  //   }
-
-  //   @media (max-width: $mediaPhones) {
-  //     font: 32px/1.1em 'Open Sans', sans-serif;
-  //     font-style: italic;
-  //     margin: 0 2px;
-  //   }
 }
 
 .DefaultProjectsPage--adaptive {
@@ -45,8 +45,9 @@
   padding: 5px 10px;
   background-color: rgba(0, 0, 0, 0.8);
   color: rgb(124, 49, 173);
+  -webkit-animation: pulse-btn 3000ms linear infinite;
   animation: pulse-btn 3000ms linear infinite;
-  transition: 0.5s;
+  @include crossBrowser(transition, all 0.5s ease);
 
   h2 {
     margin-top: 30px;
@@ -81,6 +82,8 @@
   display: inline-block;
 
   .DefaultProjects-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     &__item {
@@ -95,11 +98,11 @@
 
       cursor: pointer;
 
-      transition: 0.7s;
+      @include crossBrowser(transition, all 0.7s ease);
 
       &:hover {
         color: #ffffff;
-        transform: translateY(-7px) translateX(-7px);
+        @include crossBrowser(transform, translateY(-7px) translateX(-7px));
         text-shadow: 6px 6px 0 rgb(144, 15, 230), 0px -1px 0 rgb(144, 15, 230),
           1px 0px 0 rgb(144, 15, 230), -1px 0px 0 rgb(144, 15, 230),
           1px 1px 0 rgb(144, 15, 230), 1px -1px 0 rgb(144, 15, 230),
@@ -119,7 +122,9 @@
 
 .DefaultProjects-content {
   margin-top: 80px;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 100px 1fr;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 100px;
 
@@ -143,9 +148,11 @@
     font-size: 20px;
     color: rgb(124, 49, 173);
 
+    -webkit-animation: pulse-btn 3000ms linear infinite;
+
     animation: pulse-btn 3000ms linear infinite;
 
-    transition: 0.5s;
+    @include crossBrowser(transition, all 0.5s ease);
 
     &:hover {
       color: #fff;
@@ -157,17 +164,38 @@
   }
 }
 
-@keyframes pulse-btn {
+@-webkit-keyframes pulse-btn {
   0% {
     border: 1px solid transparent;
+    -webkit-box-shadow: 0px 0px 0px rgb(124, 49, 173);
     box-shadow: 0px 0px 0px rgb(124, 49, 173);
   }
   50% {
     border: 1px solid rgb(124, 49, 173);
+    -webkit-box-shadow: 0px 0px 20px rgb(124, 49, 173);
     box-shadow: 0px 0px 20px rgb(124, 49, 173);
   }
   100% {
     border: 1px solid transparent;
+    -webkit-box-shadow: 0px 0px 0px rgb(124, 49, 173);
+    box-shadow: 0px 0px 0px rgb(124, 49, 173);
+  }
+}
+
+@keyframes pulse-btn {
+  0% {
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0px 0px 0px rgb(124, 49, 173);
+    box-shadow: 0px 0px 0px rgb(124, 49, 173);
+  }
+  50% {
+    border: 1px solid rgb(124, 49, 173);
+    -webkit-box-shadow: 0px 0px 20px rgb(124, 49, 173);
+    box-shadow: 0px 0px 20px rgb(124, 49, 173);
+  }
+  100% {
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0px 0px 0px rgb(124, 49, 173);
     box-shadow: 0px 0px 0px rgb(124, 49, 173);
   }
 }

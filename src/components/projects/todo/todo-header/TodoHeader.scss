@@ -1,12 +1,20 @@
 .TodoHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
   align-items: baseline;
   width: 100%;
 }
 
 .TodoHeader-info {
   text-decoration: underline;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-weight: 700;
   &__desk:last-child {

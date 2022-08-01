@@ -1,4 +1,5 @@
 @import '../../../../style/variables.scss';
+@import '../../../../style/mixins.scss';
 
 .Hero {
   height: 100vh;
@@ -9,16 +10,17 @@
   background-position: top center;
   background-repeat: no-repeat;
   background-size: 102%;
+  -webkit-animation: animatedBackground 50s linear infinite;
   animation: animatedBackground 50s linear infinite;
   text-align: center;
   overflow: hidden;
   position: relative;
-  transition: 1s;
+  @include crossBrowser(transition, all 1s ease);
 
   &__nav {
     font: 12px 'Open Sans', sans-serif;
 
-    transition: 0.5s;
+    @include crossBrowser(transition, all 0.5s ease);
 
     text-transform: uppercase;
     letter-spacing: 2.5px;
@@ -31,6 +33,7 @@
   }
 
   @media (max-width: $mediaLaptops) {
+    -webkit-animation: animatedBackground-adaptive-max 50s linear infinite;
     animation: animatedBackground-adaptive-max 50s linear infinite;
   }
 }
@@ -42,6 +45,7 @@
   margin-left: -30px;
   color: #fff;
   display: block;
+  -webkit-animation: scroll-bottom 3s linear infinite;
   animation: scroll-bottom 3s linear infinite;
 
   &__link {
@@ -51,7 +55,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
-    transition: all 0.5s ease;
+    @include crossBrowser(transition, all 0.5s ease);
     cursor: pointer;
 
     &:hover {
@@ -60,6 +64,18 @@
       background-repeat: no-repeat;
       background-size: auto;
     }
+  }
+}
+
+@-webkit-keyframes animatedBackground {
+  0% {
+    background-size: 102%;
+  }
+  50% {
+    background-size: 120%;
+  }
+  100% {
+    background-size: 102%;
   }
 }
 
@@ -74,6 +90,17 @@
     background-size: 102%;
   }
 }
+@-webkit-keyframes animatedBackground-adaptive-max {
+  0% {
+    background-size: auto 102%;
+  }
+  50% {
+    background-size: auto 120%;
+  }
+  100% {
+    background-size: auto 102%;
+  }
+}
 @keyframes animatedBackground-adaptive-max {
   0% {
     background-size: auto 102%;
@@ -83,6 +110,17 @@
   }
   100% {
     background-size: auto 102%;
+  }
+}
+
+@-webkit-keyframes scroll-bottom {
+  0% {
+    bottom: 10%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 5%;
+    opacity: 0;
   }
 }
 

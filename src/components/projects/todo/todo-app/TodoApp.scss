@@ -1,8 +1,16 @@
+@import '../../../../style/mixins.scss';
+
 .Todo {
   height: 100%;
   padding: 5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background: url('https://i.gifer.com/G1JO.gif');
   background-position: center;
@@ -11,19 +19,26 @@
   border-radius: 25px;
 
   position: relative;
+  -webkit-animation: container-in 2s linear forwards;
   animation: container-in 2s linear forwards;
 }
 .Todo-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 
-  background: url('../../../../assets/todo-app-bg-adaptive.jpg');
+  background: url('../../../../assets/todo-app-bg-adaptive.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
-  // background-color: rgb(255, 123, 0);
   border: 1px solid #000;
   border-radius: 25px;
   padding: 20px;
@@ -31,13 +46,16 @@
   height: 400px;
   display: flex;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-shadow: 15px 15px 20px rgba(255, 255, 255, 0.4);
   box-shadow: 15px 15px 20px rgba(255, 255, 255, 0.4);
   border: 3px solid rgb(255, 255, 255);
 }
 
 .Todo-container {
-  background: url('../../../../assets/todo-container-bg-adaptive.jpg');
+  background: url('../../../../assets/todo-container-bg-adaptive.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,9 +81,11 @@
     color: rgb(124, 49, 173);
     cursor: pointer;
 
+    -webkit-animation: pulse-btn 3000ms linear infinite;
+
     animation: pulse-btn 3000ms linear infinite;
 
-    transition: 0.5s;
+    @include crossBrowser(transition, all 0.5s ease);
 
     &:hover {
       color: #fff;

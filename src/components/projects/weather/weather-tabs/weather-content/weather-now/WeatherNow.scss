@@ -1,6 +1,15 @@
+@import '../../../../../../style/mixins.scss';
+
 .WeatherNow {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   position: relative;
   height: 100%;
@@ -13,11 +22,14 @@
     color: rgb(165, 105, 171);
     text-shadow: 3px 3px 3px rgba(155, 22, 138, 0.5);
 
+    -webkit-animation: now-elements-in 1s linear forwards;
+
     animation: now-elements-in 1s linear forwards;
   }
   &__image {
     background-image: url('http://openweathermap.org/img/wn/13n@4x.png');
-    // filter: invert(1);
+    -webkit-filter: grayscale(100%) brightness(140%) sepia(50%)
+      hue-rotate(-100deg) saturate(500%) contrast(1);
     filter: grayscale(100%) brightness(140%) sepia(50%) hue-rotate(-100deg)
       saturate(500%) contrast(1);
     background-repeat: no-repeat;
@@ -29,12 +41,17 @@
     position: absolute;
     left: 50%;
     top: 42%;
-    transform: translateX(-50%);
+    @include crossBrowser(transform, translateX(-50%));
+    -webkit-animation: now-image-in 2s linear forwards;
     animation: now-image-in 2s linear forwards;
   }
 }
 .WeatherNow-city {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0px 26px 10px 12px;
   position: relative;
@@ -44,6 +61,7 @@
     text-shadow: 3px 3px 3px rgba(155, 22, 138, 0.5);
     font-weight: 700;
     font-size: 19px;
+    -webkit-animation: now-elements-in 2.5s linear forwards;
     animation: now-elements-in 2.5s linear forwards;
   }
 
@@ -56,15 +74,16 @@
     height: 25px;
     display: inline-block;
     cursor: pointer;
+    -webkit-animation: now-like-in 2.5s linear forwards;
     animation: now-like-in 2.5s linear forwards;
 
     &:hover {
       background-image: url('../../../../../../assets/icons/weather/like-hover.svg');
-      transition: all 0.3s ease;
+      @include crossBrowser(transition, all 0.3s ease);
     }
     &:active {
       background-image: url('../../../../../../assets/icons/weather/like-active.svg');
-      transition: all 0.2s ease;
+      @include crossBrowser(transition, all 0.2s ease);
     }
   }
 }
@@ -73,7 +92,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  @include crossBrowser(transform, translate(-50%, -50%));
+
+  -webkit-animation: now-empty-in 1.5s linear forwards;
 
   animation: now-empty-in 1.5s linear forwards;
 
@@ -83,6 +104,21 @@
     font-weight: 700;
     font-size: 25px;
     text-transform: uppercase;
+  }
+}
+
+@-webkit-keyframes now-empty-in {
+  0% {
+    opacity: 0;
+    top: 100%;
+  }
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+    top: 50%;
   }
 }
 
@@ -101,37 +137,72 @@
   }
 }
 
-@keyframes now-elements-in {
+@-webkit-keyframes now-elements-in {
   0% {
     opacity: 0;
-    transform: translateX(-20%);
+    @include crossBrowser(transform, translateX(-20%));
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0);
+    @include crossBrowser(transform, translateX(0));
+  }
+}
+
+@keyframes now-elements-in {
+  0% {
+    opacity: 0;
+    @include crossBrowser(transform, translateX(-20%));
+  }
+
+  100% {
+    opacity: 1;
+    @include crossBrowser(transform, translateX(0));
+  }
+}
+
+@-webkit-keyframes now-like-in {
+  0% {
+    opacity: 0;
+    @include crossBrowser(transform, translateX(200%));
+  }
+
+  100% {
+    opacity: 1;
+    @include crossBrowser(transform, translateX(0));
   }
 }
 
 @keyframes now-like-in {
   0% {
     opacity: 0;
-    transform: translateX(200%);
+    @include crossBrowser(transform, translateX(200%));
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0);
+    @include crossBrowser(transform, translateX(0));
+  }
+}
+@-webkit-keyframes now-image-in {
+  0% {
+    opacity: 0;
+    @include crossBrowser(transform, translateX(20%));
+  }
+
+  100% {
+    opacity: 1;
+    @include crossBrowser(transform, translateX(-50%));
   }
 }
 @keyframes now-image-in {
   0% {
     opacity: 0;
-    transform: translateX(20%);
+    @include crossBrowser(transform, translateX(20%));
   }
 
   100% {
     opacity: 1;
-    transform: translateX(-50%);
+    @include crossBrowser(transform, translateX(-50%));
   }
 }

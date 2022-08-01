@@ -1,4 +1,5 @@
 @import '../../../../../../style/variables.scss';
+@import '../../../../../../style/mixins.scss';
 
 .BurgerList {
   position: fixed;
@@ -8,17 +9,18 @@
   right: 0;
   left: 0;
   z-index: 100;
-  transform: translateX(-130%);
-  transition: all 0.5s;
+  @include crossBrowser(transition, all 0.5s ease);
+  @include crossBrowser(transform, translateX(-130%));
 }
 
 .BurgerList--active {
-  transform: translateX(0);
+  @include crossBrowser(transform, translateX(0));
 }
 
 .BurgerList-blur {
   width: 100vw;
   height: 150vh;
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   position: absolute;
   z-index: -1;
@@ -29,9 +31,17 @@
   background: url('https://www.transparenttextures.com/patterns/nice-snow.png'),
     #292660;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  transition: all 0.5s;
+  @include crossBrowser(transition, all 0.5s ease);
+
   &__header {
     padding: 10px;
     font-size: 2rem;
@@ -43,9 +53,11 @@
     width: 100%;
     text-align: start;
 
+    -webkit-animation: nav-item-in 1s linear forwards;
+
     animation: nav-item-in 1s linear forwards;
 
-    transition: all 0.6s;
+    @include crossBrowser(transition, all 0.6s ease);
     @media (max-width: 690px) {
       font-size: 1.5rem;
     }
@@ -63,7 +75,9 @@
     height: 48px;
     cursor: pointer;
 
-    transition: all 0.4s ease;
+    @include crossBrowser(transition, all 0.4s ease);
+
+    -webkit-animation: nav-item-in 1s linear forwards;
 
     animation: nav-item-in 1s linear forwards;
 
@@ -85,14 +99,15 @@
       color: rgb(189, 95, 198);
     }
     &:hover {
-      transform: scale(1.2);
+      @include crossBrowser(transform, scale(1.2));
+
       .BurgerNavList-link {
         text-shadow: none;
       }
     }
     @media (max-width: $mediaTablets) {
       &:hover {
-        transform: scale(1);
+        @include crossBrowser(transform, scale(1));
         .BurgerNavList-link {
           text-shadow: none;
         }
@@ -101,13 +116,24 @@
   }
 }
 
-@keyframes burger-nav-item-in {
+@-webkit-keyframes burger-nav-item-in {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    @include crossBrowser(transform, translateX(-100%));
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    @include crossBrowser(transform, translateX(0));
+  }
+}
+
+@keyframes burger-nav-item-in {
+  0% {
+    opacity: 0;
+    @include crossBrowser(transform, translateX(-100%));
+  }
+  100% {
+    opacity: 1;
+    @include crossBrowser(transform, translateX(0));
   }
 }

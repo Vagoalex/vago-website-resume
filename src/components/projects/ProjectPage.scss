@@ -1,24 +1,35 @@
 @import '../../style/variables.scss';
+@import '../../style/mixins.scss';
 
 .ProjectPage {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
 
   width: 100%;
   background-image: url('../../assets/project-page-bg-adaptive.webp');
 
+  -webkit-animation: animated-project-background 15s linear infinite;
+
   animation: animated-project-background 15s linear infinite;
 
-  transition: all 0.7s ease;
+  @include crossBrowser(transition, all 0.7s ease);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 102%;
   overflow-y: hidden;
 
   @media (max-width: 1350px) {
+    -webkit-animation: animated-project-background-adaptive 15s linear infinite;
     animation: animated-project-background-adaptive 15s linear infinite;
   }
 }
@@ -29,10 +40,12 @@
   height: 600px;
 
   border-radius: 25px;
+  -webkit-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.6);
   box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.6);
+  -webkit-animation: container-in 2s linear forwards;
   animation: container-in 2s linear forwards;
 
-  transition: all 0.7s ease;
+  @include crossBrowser(transition, all 0.7s ease);
 
   @media (max-width: $mediaLaptops) {
     width: 800px;
@@ -68,11 +81,24 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
+  @include crossBrowser(transform, translate(-50%, -50%));
 
   &__title {
     color: rgb(124, 49, 173);
     font-size: 18px;
+  }
+}
+
+@-webkit-keyframes animated-project-background {
+  0% {
+    background-size: 102%;
+  }
+  50% {
+    background-size: 120%;
+  }
+  100% {
+    background-size: 102%;
   }
 }
 
@@ -88,6 +114,18 @@
   }
 }
 
+@-webkit-keyframes animated-project-background-adaptive {
+  0% {
+    background-size: auto 102%;
+  }
+  50% {
+    background-size: auto 120%;
+  }
+  100% {
+    background-size: auto 102%;
+  }
+}
+
 @keyframes animated-project-background-adaptive {
   0% {
     background-size: auto 102%;
@@ -100,14 +138,26 @@
   }
 }
 
-@keyframes container-in {
+@-webkit-keyframes container-in {
   0% {
     opacity: 0;
-    transform: scale(0.5);
+    @include crossBrowser(transform, scale(0.5));
   }
 
   100% {
     opacity: 1;
-    transform: scale(1);
+    @include crossBrowser(transform, scale(1));
+  }
+}
+
+@keyframes container-in {
+  0% {
+    opacity: 0;
+    @include crossBrowser(transform, scale(0.5));
+  }
+
+  100% {
+    opacity: 1;
+    @include crossBrowser(transform, scale(1));
   }
 }

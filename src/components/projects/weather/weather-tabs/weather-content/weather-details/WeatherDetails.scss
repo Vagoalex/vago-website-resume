@@ -1,8 +1,19 @@
+@import '../../../../../../style/mixins.scss';
+
 .WeatherDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   padding-left: 10px;
   color: rgb(165, 105, 171);
@@ -16,6 +27,8 @@
     position: relative;
     z-index: 1;
 
+    -webkit-animation: details-name-in 1s linear forwards;
+
     animation: details-name-in 1s linear forwards;
   }
   &:after {
@@ -26,6 +39,7 @@
     position: absolute;
     top: 21%;
     left: 2%;
+    -webkit-animation: details-name-in 1s linear forwards;
     animation: details-name-in 1s linear forwards;
   }
 }
@@ -36,18 +50,23 @@
   &__text {
     margin-top: 15%;
     &:nth-child(1) {
+      -webkit-animation: details-text-in 1.2s linear forwards;
       animation: details-text-in 1.2s linear forwards;
     }
     &:nth-child(2) {
+      -webkit-animation: details-text-in 1.5s linear forwards;
       animation: details-text-in 1.5s linear forwards;
     }
     &:nth-child(3) {
+      -webkit-animation: details-text-in 1.8s linear forwards;
       animation: details-text-in 1.8s linear forwards;
     }
     &:nth-child(4) {
+      -webkit-animation: details-text-in 2.1s linear forwards;
       animation: details-text-in 2.1s linear forwards;
     }
     &:nth-child(5) {
+      -webkit-animation: details-text-in 2.4s linear forwards;
       animation: details-text-in 2.4s linear forwards;
     }
 
@@ -69,25 +88,48 @@
   }
 }
 
-@keyframes details-name-in {
+@-webkit-keyframes details-name-in {
   0% {
     opacity: 0;
-    transform: translateX(-50%);
+    @include crossBrowser(transform, translateX(-50%));
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0);
+    @include crossBrowser(transform, translateX(0));
+  }
+}
+
+@keyframes details-name-in {
+  0% {
+    opacity: 0;
+    @include crossBrowser(transform, translateX(-50%));
+  }
+
+  100% {
+    opacity: 1;
+    @include crossBrowser(transform, translateX(0));
+  }
+}
+@-webkit-keyframes details-text-in {
+  0% {
+    opacity: 0;
+    @include crossBrowser(transform, translateY(300px));
+  }
+
+  100% {
+    opacity: 1;
+    @include crossBrowser(transform, translateY(0));
   }
 }
 @keyframes details-text-in {
   0% {
     opacity: 0;
-    transform: translateY(300px);
+    @include crossBrowser(transform, translateY(300px));
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
+    @include crossBrowser(transform, translateY(0));
   }
 }

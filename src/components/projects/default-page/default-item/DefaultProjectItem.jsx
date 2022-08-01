@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { changeActivePage } from '../../../../store/page/pageSlice';
-import todoImg from '../../../../assets/images/project-page/todo.jpg';
-import weatherImg from '../../../../assets/images/project-page/weather.jpg';
+import todoImg from '../../../../assets/images/project-page/todo-adaptive.webp';
+import weatherImg from '../../../../assets/images/project-page/weather-adaptive.webp';
 
 import './DefaultProjectItem.scss';
 
@@ -45,43 +45,5 @@ const ImageProjectItem = ({ id }) => {
       throw new Error('Invalid id');
   }
 };
-
-// const LinkLiveCard = ({ id, link, liveTitle }) => {
-//   switch (id) {
-//     case 'mini-projects':
-//       return (
-//         <Link to={link} className='Project-btn live' title={liveTitle}>
-//           see live
-//         </Link>
-//       );
-//     case 'marvel-app':
-//       return (
-//         <a
-//           href={link}
-//           className='Project-btn live'
-//           target='_blank'
-//           rel='noreferrer'
-//           title={liveTitle}
-//         >
-//           see live
-//         </a>
-//       );
-//     case 'hero-panel':
-//       return (
-//         <a
-//           href={link}
-//           className='Project-btn live'
-//           target='_blank'
-//           rel='noreferrer'
-//           title={liveTitle}
-//         >
-//           github repo
-//         </a>
-//       );
-
-//     default:
-//       throw new Error('Invalid id');
-//   }
-// };
 
 export default DefaultProjectItem;

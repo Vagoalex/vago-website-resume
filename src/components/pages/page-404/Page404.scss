@@ -1,3 +1,5 @@
+@import '../../../style/mixins.scss';
+
 .Page404 {
   position: relative;
   height: 100vh;
@@ -8,9 +10,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  @include crossBrowser(transform, translate(-50%, -50%));
 }
 
 .Page404-not-found {
@@ -30,8 +30,7 @@
     padding: 10px 40px;
     font-size: 14px;
     font-weight: 700;
-    -webkit-transition: 0.2s all;
-    transition: 0.2s all;
+    @include crossBrowser(transition, all 0.2s ease);
 
     &:hover {
       color: #8400ff;
@@ -50,9 +49,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    @include crossBrowser(transform, translate(-50%, -50%));
     font-size: 224px;
     font-weight: 900;
     margin-top: 0px;

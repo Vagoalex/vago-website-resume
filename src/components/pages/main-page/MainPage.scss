@@ -1,6 +1,17 @@
 .MainPage {
+  -webkit-animation: container-main-in 2s linear forwards;
   animation: container-main-in 2s linear forwards;
   overflow-x: hidden;
+}
+
+@-webkit-keyframes container-main-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes container-main-in {

@@ -1,13 +1,18 @@
 @import '../../../../style/variables.scss';
+@import '../../../../style/mixins.scss';
 
 .Social-list {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .Social-list-item {
   margin: 0 30px;
-  transition: all 0.5s cubic-bezier(0.4, 0, 1, 1);
+  @include crossBrowser(transition, all 0.5s cubic-bezier(0.4, 0, 1, 1));
 
   .Social-list-item-link {
     color: transparent;
@@ -52,7 +57,7 @@
     }
   }
   &:hover {
-    transform: scale(1.2);
+    @include crossBrowser(transform, scale(1.2));
   }
 
   @media (max-width: $mediaSmallTablets) {
