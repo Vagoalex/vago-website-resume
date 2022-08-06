@@ -23,7 +23,7 @@ const SocialItem = ({ name, socialLink }) => {
         target='_blank'
         rel='noreferrer'
       >
-        link
+        <i className={`fa fa-${name}`}></i>
       </a>
     </li>
   );

@@ -99,7 +99,7 @@
     margin-bottom: 30px;
   }
   @media (max-width: $mediaSmallTablets) {
-    max-width: 380px;
+    max-width: 405px;
     margin: 0 auto;
     margin-bottom: 20px;
   }
@@ -124,6 +124,9 @@
 
     @media (max-width: $mediaLaptops) {
       font: 15px/1.1em 'Open Sans', sans-serif;
+    }
+    @media (max-width: $mediaPhones) {
+      font: 16px/1.1em 'Open Sans', sans-serif;
     }
   }
   &:hover {

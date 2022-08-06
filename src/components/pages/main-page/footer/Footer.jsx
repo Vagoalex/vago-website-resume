@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Link } from 'react-scroll';
 import data from '../../../../app-data.json';
 
@@ -5,7 +6,7 @@ import './Footer.scss';
 
 const { 'footer-socials': footerSocials } = data;
 
-const Footer = () => {
+const Footer: FC = (): JSX.Element => {
   return (
     <div className='Footer'>
       <div className='Footer-wrapper'>
