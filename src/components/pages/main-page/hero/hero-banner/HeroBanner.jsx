@@ -18,9 +18,9 @@ const {
   'second-part': secondDesk,
   'span-part': spanDesk,
   'third-part': thirdDesk,
-  'adativeDesk-first': firstAdaptiveDesk,
-  'adativeDesk-span': spanAdaptiveDesk,
-  'adativeDesk-second': secondAdaptiveDesk,
+  'adaptiveDesk-first': firstAdaptiveDesk,
+  'adaptiveDesk-span': spanAdaptiveDesk,
+  'adaptiveDesk-second': secondAdaptiveDesk,
 } = desks;
 
 const HeroBanner = () => {

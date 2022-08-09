@@ -6,7 +6,6 @@ import './Projects.scss';
 const { title, 'project-info': projectInfo } = data.projects;
 
 const { gitProjects } = projectInfo;
-
 const Projects = () => {
   return (
     <>
@@ -28,10 +27,10 @@ const Projects = () => {
           </div>
         </div>
         <div className='Project-container wrapper'>
-          <ProjectCard data={projectInfo.miniProjects} />
           {gitProjects.map((project) => (
             <ProjectCard key={project.id} data={project} />
           ))}
+          <ProjectCard data={projectInfo.miniProjects} />
         </div>
       </section>
     </>

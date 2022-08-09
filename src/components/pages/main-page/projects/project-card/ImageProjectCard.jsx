@@ -1,6 +1,7 @@
 import idaprojectImg from '../../../../../assets/images/main-page/idaproject-adaptive.webp';
 import welbexImg from '../../../../../assets/images/main-page/welbex-adaptive.webp';
 import iSpring from '../../../../../assets/images/main-page/iSpring.webp';
+import htdev from '../../../../../assets/images/main-page/htdev-adaptive.webp';
 
 import miniProjectsImg from '../../../../../assets/images/main-page/mini-projects-adaptive.webp';
 import heroAdminImg from '../../../../../assets/images/main-page/project-hero-admin-panel-adaptive.webp';
@@ -8,6 +9,10 @@ import marvellAppImg from '../../../../../assets/images/main-page/project-marvel
 
 const ImageProjectCard = ({ id }) => {
   switch (id) {
+    case 'htdev':
+      return (
+        <img src={htdev} className='Project-img' alt='htdev' loading='lazy' />
+      );
     case 'ispring':
       return (
         <img
