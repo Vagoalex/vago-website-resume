@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/vago-website-resume/static/css/main.798d3b57.css",
-    "main.js": "/vago-website-resume/static/js/main.a7117ee5.js",
-    "static/css/691.64bf0dcd.chunk.css": "/vago-website-resume/static/css/691.64bf0dcd.chunk.css",
-    "static/js/691.459d87b5.chunk.js": "/vago-website-resume/static/js/691.459d87b5.chunk.js",
+    "main.js": "/vago-website-resume/static/js/main.16276034.js",
+    "static/css/601.7e5de703.chunk.css": "/vago-website-resume/static/css/601.7e5de703.chunk.css",
+    "static/js/601.7904ef60.chunk.js": "/vago-website-resume/static/js/601.7904ef60.chunk.js",
     "static/css/959.c46fb91e.chunk.css": "/vago-website-resume/static/css/959.c46fb91e.chunk.css",
     "static/js/959.f0ffa7f2.chunk.js": "/vago-website-resume/static/js/959.f0ffa7f2.chunk.js",
     "static/css/312.5aa1b671.chunk.css": "/vago-website-resume/static/css/312.5aa1b671.chunk.css",
-    "static/js/312.0a70b32b.chunk.js": "/vago-website-resume/static/js/312.0a70b32b.chunk.js",
+    "static/js/312.e62b1e4c.chunk.js": "/vago-website-resume/static/js/312.e62b1e4c.chunk.js",
     "static/css/890.76471ab2.chunk.css": "/vago-website-resume/static/css/890.76471ab2.chunk.css",
     "static/js/890.2c7e84d8.chunk.js": "/vago-website-resume/static/js/890.2c7e84d8.chunk.js",
     "static/css/615.5db64a8b.chunk.css": "/vago-website-resume/static/css/615.5db64a8b.chunk.css",
@@ -37,6 +37,7 @@
     "static/media/todo-container-bg-adaptive.webp": "/vago-website-resume/static/media/todo-container-bg-adaptive.11cd948d0a219e4a5b0f.webp",
     "static/media/bg-container.jpg": "/vago-website-resume/static/media/bg-container.532177ec0da2cfd25188.jpg",
     "static/media/idaproject-adaptive.webp": "/vago-website-resume/static/media/idaproject-adaptive.98166c5906753da1e7a6.webp",
+    "static/media/htdev-adaptive.webp": "/vago-website-resume/static/media/htdev-adaptive.8bf8a0fffc3c32eda46c.webp",
     "static/media/weather-adaptive.webp": "/vago-website-resume/static/media/weather-adaptive.851544ebe486df6a0e46.webp",
     "static/media/iSpring.webp": "/vago-website-resume/static/media/iSpring.3abfcff9e3f3738ac3d0.webp",
     "static/media/welbex-adaptive.webp": "/vago-website-resume/static/media/welbex-adaptive.b902bfb461bac6b192df.webp",
@@ -57,13 +58,13 @@
     "static/media/item-important.svg": "/vago-website-resume/static/media/item-important.c6e849a28a62a78c1465.svg",
     "static/media/item-important-important.svg": "/vago-website-resume/static/media/item-important-important.08831b7070635158df9c.svg",
     "main.798d3b57.css.map": "/vago-website-resume/static/css/main.798d3b57.css.map",
-    "main.a7117ee5.js.map": "/vago-website-resume/static/js/main.a7117ee5.js.map",
-    "691.64bf0dcd.chunk.css.map": "/vago-website-resume/static/css/691.64bf0dcd.chunk.css.map",
-    "691.459d87b5.chunk.js.map": "/vago-website-resume/static/js/691.459d87b5.chunk.js.map",
+    "main.16276034.js.map": "/vago-website-resume/static/js/main.16276034.js.map",
+    "601.7e5de703.chunk.css.map": "/vago-website-resume/static/css/601.7e5de703.chunk.css.map",
+    "601.7904ef60.chunk.js.map": "/vago-website-resume/static/js/601.7904ef60.chunk.js.map",
     "959.c46fb91e.chunk.css.map": "/vago-website-resume/static/css/959.c46fb91e.chunk.css.map",
     "959.f0ffa7f2.chunk.js.map": "/vago-website-resume/static/js/959.f0ffa7f2.chunk.js.map",
     "312.5aa1b671.chunk.css.map": "/vago-website-resume/static/css/312.5aa1b671.chunk.css.map",
-    "312.0a70b32b.chunk.js.map": "/vago-website-resume/static/js/312.0a70b32b.chunk.js.map",
+    "312.e62b1e4c.chunk.js.map": "/vago-website-resume/static/js/312.e62b1e4c.chunk.js.map",
     "890.76471ab2.chunk.css.map": "/vago-website-resume/static/css/890.76471ab2.chunk.css.map",
     "890.2c7e84d8.chunk.js.map": "/vago-website-resume/static/js/890.2c7e84d8.chunk.js.map",
     "615.5db64a8b.chunk.css.map": "/vago-website-resume/static/css/615.5db64a8b.chunk.css.map",
@@ -79,6 +80,6 @@
   },
   "entrypoints": [
     "static/css/main.798d3b57.css",
-    "static/js/main.a7117ee5.js"
+    "static/js/main.16276034.js"
   ]
 }
